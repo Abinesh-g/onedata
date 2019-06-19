@@ -4,7 +4,7 @@ if(isset($_POST['submit']))
 {
 
     
-include 'connection.php';
+                    include 'connection.php';
                     $employeeId="onedata01";
                     $description=$_POST['description'];
                     $image= addslashes($_FILES['image']['tmp_name']);
@@ -93,47 +93,53 @@ text-align: center;
 }
 </style>
 <title>ONEDATA  </title>
-</head>
-<nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-           
-    <ul class="nav-item" style="padding-left:20px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
+</head><nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+
+         
+    
+       <ul class="nav navbar-nav navbar-right">
+       <a href="insertDetailsMenu.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul> 
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-4"></div>
+        
+    
+</nav> 
 <body class="" background="bg1.png">
 <form action="" class="text-center" method="post" style="padding-top:0%" enctype="multipart/form-data">
 <br><br><br><br><br><br><br><br> 
  <center>       
  <h3 >SELECT TYPE:</h3>
  <select  name="description" required>
-					<option value="AADHAR">AADHAR CARD</option>
+					<option value="AADHAR-CARD">AADHAR CARD</option>
 					<option value="PASSBOOK">PASSBOOK</option>
 					<option value="PASSPORT">PASSPORT</option>
-					<option value="PAN">PAN</option>
-					<option value="SSLC">SSLC MARKSHEET</option>
-					<option value="HSC">HSC MARKSHEET</option>
-					<option value="UG1">UG SEMESTER-I</option>
-					<option value="UG2">UG SEMESTER-II</option>
-					<option value="UG3">UG SEMESTER-III</option>
-					<option value="UG4">UG SEMESTER-IV</option>
-					<option value="UG5">UG SEMESTER-V</option>
-					<option value="UG6">UG SEMESTER-VI</option>
-					<option value="UG7">UG SEMESTER-VII</option>
-					<option value="UG8">UG SEMESTER-VIII</option>
-					<option value="UG9">UG SEMESTER-IX</option>
-					<option value="UG10">UG SEMESTER-X</option>
-					<option value="PG1">PG SEMESTER-I</option>
-					<option value="PG2">PG SEMESTER-II</option>
-					<option value="PG3">PG SEMESTER-III</option>
-					<option value="PG4">PG SEMESTER-VI</option>
-					<option value="PG5">PG SEMESTER-V</option>
-					<option value="PG6">PG SEMESTER-VI</option>
+					<option value="PAN-CARD">PAN</option>
+					<option value="SSLC-MARKSHEET">SSLC MARKSHEET</option>
+					<option value="HSC-MARKSHEET">HSC MARKSHEET</option>
+					<option value="UG1-SEMESTER-I">UG SEMESTER-I</option>
+					<option value="UG2-SEMESTER-II">UG SEMESTER-II</option>
+					<option value="UG3-SEMESTER-III">UG SEMESTER-III</option>
+					<option value="UG4-SEMESTER-IV">UG SEMESTER-IV</option>
+					<option value="UG5-SEMESTER-V">UG SEMESTER-V</option>
+					<option value="UG6-SEMESTER-VI">UG SEMESTER-VI</option>
+					<option value="UG7-SEMESTER-VII">UG SEMESTER-VII</option>
+					<option value="UG8-SEMESTER-VIII">UG SEMESTER-VIII</option>
+					<option value="UG9-SEMESTER-IX">UG SEMESTER-IX</option>
+					<option value="UG10-SEMESTER-X">UG SEMESTER-X</option>
+					<option value="PG1-SEMESTER-I">PG SEMESTER-I</option>
+					<option value="PG2-SEMESTER-II">PG SEMESTER-II</option>
+					<option value="PG3-SEMESTER-III">PG SEMESTER-III</option>
+					<option value="PG4-SEMESTER-IV">PG SEMESTER-VI</option>
+					<option value="PG5-SEMESTER-V">PG SEMESTER-V</option>
+					<option value="PG6-SEMESTER-VI">PG SEMESTER-VI</option>
+          <option value="CERTIFICATION-I">CERTIFICATION-I</option>
+          <option value="CERTIFICATION-II">CERTIFICATION-II</option>
+          <option value="CERTIFICATION-III">CERTIFICATION-III</option>
+          <option value="CERTIFICATION-IV">CERTIFICATION-IV</option>
+          <option value="CERTIFICATION-V">CERTIFICATION-V</option>
 					<option value="CONSOLIDATED">CONSOLIDATED CERTIFICATE</option>
 					</select>
 </center>  				 	
@@ -157,7 +163,7 @@ text-align: center;
 		<div class="row">
 		     <div class="col-md-4"></div>
 				<div class="col-md-4">
-				<input type="submit" class="btn btn-lg btn btn-outline-primary btn-block" name="submit" value="Insert">
+				<input type="submit" class="btn btn-lg btn btn-outline-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9);  "; name="submit"  value="submit">
 				</div>
 		</div>
 </form>

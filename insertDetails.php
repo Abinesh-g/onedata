@@ -1,5 +1,9 @@
 
 <?php
+	session_start();
+    $employeeId=$_SESSION['employeeId'];
+    
+
 include 'connection.php';
 if(isset($_POST['Submit']))
 {
@@ -8,17 +12,26 @@ if(isset($_POST['Submit']))
 	 
 
 	$name=$_POST['name'];
-	$employeeId=$_POST['employeeId'];
 	$designation=$_POST['designation'];
 	$dob=$_POST['dob'];
 	$doj=$_POST['doj'];
 	$gender=$_POST['gender'];
 	$bloodGroup=$_POST['bloodGroup'];
-	$martialStatus=$_POST['martialStatus'];
+	$martialStatus=$_POST['martialStatus'];	
+	$spouseOrHusbandName=$_POST['spouseOrHusbandName'];
+
 	$languagesKnown=$_POST['languagesKnown'];
 	$employeeContactNumber=$_POST['employeeContactNumber'];
+	$employeeOfficialContactNumber=$_POST['employeeOfficialContactNumber'];
 	$email=$_POST['email'];
 	$panNumber=$_POST['panNumber'];
+
+	$passportNumber=$_POST['passportNumber'];
+	$EPFNumber=$_POST['EPFNumber'];
+	$insuranceNumber=$_POST['insuranceNumber'];
+	
+
+
 	$aadharNumber=$_POST['aadharNumber'];
 	$bankAccountNumber=$_POST['bankAccountNumber'];
 	$bankIfscCode=$_POST['bankIfscCode'];
@@ -49,22 +62,24 @@ if(isset($_POST['Submit']))
 	$linkedinId=$_POST['linkedinId'];
 	$skypeId=$_POST['skypeId'];
 
+	$emergencyPersonName=$_POST['emergencyPersonName'];
+	$emergencyPersonNumber=$_POST['emergencyPersonNumber'];
+	$emergencyPersonRelation=$_POST['emergencyPersonRelation'];
+
 	$image=addslashes($_FILES['image']['tmp_name']);               
     $image=file_get_contents($image);
     $image=base64_encode($image);
 
 
-	$query="INSERT INTO details(name,employeeId,designation,dob,doj,gender,bloodGroup,martialStatus,languagesKnown,employeeContactNumber,email,panNumber,aadharNumber,bankAccountNumber,bankIfscCode,religion,caste,numberOfSiblings,residentialAddress,placeOfArrival,travelMode,fatherName,motherName,fatherOccupation,motherOccupation,annualIncome,permanantAddress,parentContactNumber,tenthSchoolName,tenthMark,tenthPercentage,tenthBoardOfStudy,twelthSchoolName,twelthMark,twelthPercentage,twelthBoardOfStudy,linkedinId,skypeId,image)VALUES('$name','$employeeId','$designation','$dob','$doj','$gender','$bloodGroup','$martialStatus','$languagesKnown','$employeeContactNumber','$email','$panNumber','$aadharNumber','$bankAccountNumber','$bankIfscCode','$religion','$caste','$numberOfSiblings','$residentialAddress','$placeOfArrival','$travelMode','$fatherName','$motherName','$fatherOccupation','$motherOccupation','$annualIncome','$permanantAddress','$parentContactNumber','$tenthSchoolName','$tenthMark','$tenthPercentage','$tenthBoardOfStudy','$twelthSchoolName','$twelthMark','$twelthPercentage','$twelthBoardOfStudy','$linkedinId','$skypeId','$image')";
+	$query="INSERT INTO details(name,employeeId,designation,dob,doj,gender,bloodGroup,martialStatus,spouseOrHusbandName,languagesKnown,employeeContactNumber,email,employeeOfficialContactNumber,panNumber,passportNumber,EPFNumber,insuranceNumber,aadharNumber,bankAccountNumber,bankIfscCode,religion,caste,numberOfSiblings,residentialAddress,placeOfArrival,travelMode,fatherName,motherName,fatherOccupation,motherOccupation,annualIncome,permanantAddress,parentContactNumber,tenthSchoolName,tenthMark,tenthPercentage,tenthBoardOfStudy,twelthSchoolName,twelthMark,twelthPercentage,twelthBoardOfStudy,linkedinId,skypeId,image,emergencyPersonName,emergencyPersonNumber,emergencyPersonRelation)VALUES('$name','$employeeId','$designation','$dob','$doj','$gender','$bloodGroup','$martialStatus','$spouseOrHusbandName','$languagesKnown','$employeeContactNumber','$email','$employeeOfficialContactNumber','$panNumber','$passportNumber','$EPFNumber','$insuranceNumber','$aadharNumber','$bankAccountNumber','$bankIfscCode','$religion','$caste','$numberOfSiblings','$residentialAddress','$placeOfArrival','$travelMode','$fatherName','$motherName','$fatherOccupation','$motherOccupation','$annualIncome','$permanantAddress','$parentContactNumber','$tenthSchoolName','$tenthMark','$tenthPercentage','$tenthBoardOfStudy','$twelthSchoolName','$twelthMark','$twelthPercentage','$twelthBoardOfStudy','$linkedinId','$skypeId','$image','$emergencyPersonName','$emergencyPersonNumber','$emergencyPersonRelation')";
 	$equ=mysqli_query($connection,$query);
             if($equ)
             {
-                echo nl2br($employeeId."\n value");
-                echo ("\n inserted successfully...");
+                echo "<script>alert('Value Inserted')</script>";
             }
             else
             {
-                echo($employeeId."\n value");
-                echo nl2br("\n not inserted");
+                echo "<script>alert('Value NotInserted')</script>";
             }
 
 
@@ -80,19 +95,21 @@ if(isset($_POST['Submit']))
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	</head><title>ONEDATA</title>
-		
-	<nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-           
-    <ul class="nav-item" style="padding-left:20px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
+	
+<nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+
+         
+    
+       <ul class="nav navbar-nav navbar-right">
+       <a href="insertDetailsMenu.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul> 
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-4"></div>
+        
+    
+</nav> 
 <body class="" background="bg1.png">
 <form action="" class="text-center" method="post" style="padding-top:0%" enctype="multipart/form-data">
 					<!-- PERSONAL DETAILS -->
@@ -105,8 +122,7 @@ if(isset($_POST['Submit']))
 
   					<div class="form-group">
 
-					<input type="text" class="form-control" placeholder="Name" name="name" required="true"><br/>
-					<input type="text" class="form-control" placeholder="Employee Id" name="employeeId" required="true"><br/>
+					<input type="text" class="form-control" placeholder="Name" name="name" required="true"><br/> 
 					<input type="text" class="form-control" name="designation" placeholder="Designation" required="true">		
 
 
@@ -151,32 +167,42 @@ if(isset($_POST['Submit']))
                		</select>		</div></div>
 
 
-
-					<label>Marital Status </label> <select  name="martialStatus" class="form-control"  required="true">
+               		
+					<label>Marital Status </label>
+					 <select  name="martialStatus" class="form-control"  required="true">
 						<option value="Male">Single</option>
 						<option value="Female">Married</option> 
-					</select><br/>
-						
+					</select> <BR>
+					<input placeholder="Spouse or husband name" class="form-control" type="text" name="spouseOrHusbandName" required="true"><br/> 
+
+
 					<input placeholder="Language Known " class="form-control"  type="text" name="languagesKnown" required="true"><br/>
 					<div class="row">
 
 					<div class="col-md-6 mb-3">
 					
-					<input placeholder="Contact Number" class="form-control"  type="number" name="employeeContactNumber" required="true"></div>
+					<input placeholder="Personal Contact Number" class="form-control"  type="number" name="employeeContactNumber" required="true"></div>
 					<div class="col-md-6 mb-3">
 					<input placeholder="Email Id" class="form-control"  type="email" name="email" required="true"></div></div>
-
-					<input placeholder="PAN Number" class="form-control" type="number" name="panNumber" required="true"><br/>
-					<input placeholder="Aadhar Number" class="form-control" type="number" name="aadharNumber"><br/>
-
 
 					<div class="row">
 
 					<div class="col-md-6 mb-3">
-					<input placeholder="Bank Account Number" class="form-control" type="number" name="bankAccountNumber"></div>
+					
+					<input placeholder="Official Contact Number" class="form-control"  type="number" name="employeeOfficialContactNumber" required="true"></div>
+					<div class="col-md-6 mb-3">
+					<input placeholder="PAN Number" class="form-control" type="number" name="panNumber" required="true"><br/></div></div>
+					<input placeholder="Passport Number" class="form-control" type="number" name="passportNumber"required="true"><br/>
+					<input placeholder="EPF Number" class="form-control" type="number" name="EPFNumber"required="true"><br/>
+					<input placeholder="Insurance Number" class="form-control" type="number" name="insuranceNumber"required="true"><br/>
+					<input placeholder="Aadhar Number" class="form-control" type="number" name="aadharNumber"required="true"><br/>
+					<div class="row">
+
+					<div class="col-md-6 mb-3">
+					<input placeholder="Bank Account Number" class="form-control" type="number" name="bankAccountNumber"required="true"></div>
 					<div class="col-md-6 mb-3">
 					
-					<input placeholder="IFSC Code" class="form-control" type="text" name="bankIfscCode"></div></div>					
+					<input placeholder="IFSC Code" class="form-control" type="text" name="bankIfscCode"required="true"></div></div>					
                 	<div class="row">
 
 					<div class="col-md-6 mb-3">
@@ -209,7 +235,7 @@ if(isset($_POST['Submit']))
 	                    <option value="10">10</option>
             		</select><br/>
 
-					<input class="form-control"  placeholder="Residential ddress" required="true" type="textarea" name="residentialAddress"><br/>
+					<input class="form-control"  placeholder="Residential ddress" required="true" type="textarea" name="residentialAddress" ><br/>
 					
 					<div class="row">
 
@@ -221,13 +247,15 @@ if(isset($_POST['Submit']))
 					<div class="col-md-6 mb-3">
 						
 					<input class="form-control"   required="true" type="text" name="travelMode" placeholder="Travel Mode"></div></div>
-
+					<div class="row"><div class="col-md-5 mb-2">
+					<label for="pic">UPLOAD YOUR PHOTO:</label></div><div class="col-md-4 mb-1">
+                	<input type="file"  name="image" class = "btn btn-outline-secondary"   required></div></div><br><br>
 
 
 
 					
 					<!-- PARENT DETAILS -->
-					
+					<h2 class="text-secondary">PARENT DETAILS</h2><br>
 
 					<div class="row">
 
@@ -251,9 +279,9 @@ if(isset($_POST['Submit']))
 					<input class="form-control"  placeholder="Mother Occupation" required="true" type="text" name="motherOccupation"></div></div>
 					<input class="form-control"  placeholder="Annual Income" required="true" type="number" name="annualIncome"><br/>
 					<input class="form-control"  placeholder="Permanant Address" required="true" type="text" name="permanantAddress"><br/>
-					<input class="form-control"  placeholder="Parent Contact Number" required="true" type="number" name="parentContactNumber"><br/>
+					<input class="form-control"  placeholder="Parent Contact Number" required="true" type="number" name="parentContactNumber"><br/><br>
 					<!-- ACADEMIC DETAILS -->
-
+					<h2 class="text-secondary">ACADEMIC DETAILS</h2><br>
 
 					<div class="row">
 
@@ -270,22 +298,28 @@ if(isset($_POST['Submit']))
 					<div class="col-md-6 mb-3">
 					<input class="form-control"  placeholder="12th Mark" required="true" type="number" name="twelthMark"></div></div>
 					<input class="form-control"  placeholder="12th Percentage" required="true" type="number" name="twelthPercentage"><br/>
-					<input class="form-control"  placeholder="12th Board Of Study" required="true" type="text" name="twelthBoardOfStudy"><br/>
+					<input class="form-control"  placeholder="12th Board Of Study" required="true" type="text" name="twelthBoardOfStudy"><br/><br>
 					<!-- SOCIAL MEDIA LINK -->
+					<h2 class="text-secondary">SOCIAL MEDIA DETAILS</h2><br>
 					<div class="row">
 
 					<div class="col-md-6 mb-3">
 					<input class="form-control"  placeholder="Linkedin Id" required="true" type="text" name="linkedinId"><br/></div>
 					<div class="col-md-6 mb-3">
 					<input class="form-control"  placeholder="Skype Id" required="true" type="text" name="skypeId"><br/>
-					</div></div>
+					</div></div><br><br>
 
-					<div class="row"><div class="col-md-6 mb-3">
-					<label for="pic">UPLOAD PHOTO:</label></div><div class="col-md-3 mb-1">
-                	<input type="file"  name="image" class = "btn btn-outline-secondary"   required></div></div>
+
+					<h2 class="text-secondary">EMERGENCY CONTACT DETAILS</h2><br>
+					<input class="form-control"  placeholder="PERSON NAME" required="true" type="text" name="emergencyPersonName"> <br/>
+					<input class="form-control"  placeholder="CONTACT NUMBER" required="true" type="number" name="emergencyPersonNumber"><br/>
+					<input class="form-control"  placeholder="RELATION" required="true" type="text" name="emergencyPersonRelation"><br/>
+
+
+					
 					
 					<div class="row"><div class="col-md-3"></div><div class="col-md-5"><br><br>
-					<center><input type="submit" name="Submit" class = "btn btn-outline-primary" value="SUBMIT FORM"></div></center></div>
+					<center><input type="submit" name="Submit" class = "btn btn-outline-secondary" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;";value="SUBMIT FORM"></div></center></div>
 				</div>
 				</form>
 			

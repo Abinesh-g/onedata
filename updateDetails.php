@@ -3,29 +3,15 @@ session_start();
 
 $employeeId=$_SESSION["employeeId"];
 
-    $con=mysqli_connect('localhost','root','');
-    if($con)
-    {
-    //echo nl2br( "\n server connected");
-    }
-    else
-    {
-     echo nl2br("\n server not connected");
-    }
-    if(mysqli_select_db($con,'onedata'))
-    {
-    //echo nl2br("\n db connected ");
-    }
-    else
-    {
-    echo nl2br("\n db not connected");
-    }
+
+    include 'connection.php';
+
+
     
-    //$reg_no=$_POST['reg_no'];
 $sql="SELECT * FROM details WHERE employeeId='$employeeId' ";
 
 
-if ($result=mysqli_query($con,$sql))
+if ($result=mysqli_query($connection,$sql))
   {
      $i=0;
      $copy=array();
@@ -41,41 +27,37 @@ if ($result=mysqli_query($con,$sql))
 if(isset($_POST['update']))
 {
 
-    $con=mysqli_connect('localhost','root','');
-    if($con)
-    {
-  // echo nl2br( "\n server connected");
-    }
-    else
-    {
-     echo nl2br("\n server not connected");
-    }
-    if(mysqli_select_db($con,'onedata'))
-    {
-    //echo nl2br("\n db connected ");
-    }
-    else
-    {
-    echo nl2br("\n db not connected");
-    }
+   
+
+
+
+
     $name=$_POST['name'];
-    $employeeId=$_POST['employeeId'];
-    $employeeId1=$_POST['employeeId1'];
     $designation=$_POST['designation'];
     $dob=$_POST['dob'];
     $doj=$_POST['doj'];
     $gender=$_POST['gender'];
     $bloodGroup=$_POST['bloodGroup'];
-    $martialStatus=$_POST['martialStatus'];
+    $martialStatus=$_POST['martialStatus']; 
+    $spouseOrHusbandName=$_POST['spouseOrHusbandName'];
+
     $languagesKnown=$_POST['languagesKnown'];
     $employeeContactNumber=$_POST['employeeContactNumber'];
+    $employeeOfficialContactNumber=$_POST['employeeOfficialContactNumber'];
     $email=$_POST['email'];
     $panNumber=$_POST['panNumber'];
+
+    $passportNumber=$_POST['passportNumber'];
+    $EPFNumber=$_POST['EPFNumber'];
+    $insuranceNumber=$_POST['insuranceNumber'];
+    
+
+
     $aadharNumber=$_POST['aadharNumber'];
     $bankAccountNumber=$_POST['bankAccountNumber'];
     $bankIfscCode=$_POST['bankIfscCode'];
     $religion=$_POST['religion'];
-    $caste=$_POST['religion'];
+    $caste=$_POST['caste'];
     $numberOfSiblings=$_POST['numberOfSiblings'];
     $residentialAddress=$_POST['residentialAddress'];
     $placeOfArrival=$_POST['placeOfArrival'];
@@ -101,18 +83,20 @@ if(isset($_POST['update']))
     $linkedinId=$_POST['linkedinId'];
     $skypeId=$_POST['skypeId'];
 
-        $qname="UPDATE details SET name='$name',employeeId='$employeeId',designation='$designation',dob='$dob',doj='$doj',gender='$gender',bloodGroup='$bloodGroup',martialStatus='$martialStatus',languagesKnown='$languagesKnown',employeeContactNumber='$employeeContactNumber',email='$email',panNumber='$panNumber',aadharNumber='$aadharNumber',bankAccountNumber='$bankAccountNumber',bankIfscCode='$bankIfscCode',religion='$religion',caste='$caste',numberOfSiblings='$numberOfSiblings',residentialAddress='$residentialAddress',placeOfArrival='$placeOfArrival',travelMode='$travelMode',fatherName='$fatherName',motherName='$motherName',fatherOccupation='$fatherOccupation',motherOccupation='$motherOccupation',annualIncome='$annualIncome',permanantAddress='$permanantAddress',parentContactNumber='$parentContactNumber',tenthSchoolName='$tenthSchoolName',tenthMark='$tenthMark',tenthPercentage='$tenthPercentage',tenthBoardOfStudy='$tenthBoardOfStudy',twelthSchoolName='$twelthSchoolName',twelthMark='$twelthMark',twelthPercentage='$twelthPercentage',twelthBoardOfStudy='$twelthBoardOfStudy',linkedinId='$linkedinId',skypeId='$skypeId' WHERE employeeId='$employeeId1' ";
-            $equ=mysqli_query($con,$qname);
+    $emergencyPersonName=$_POST['emergencyPersonName'];
+    $emergencyPersonNumber=$_POST['emergencyPersonNumber'];
+    $emergencyPersonRelation=$_POST['emergencyPersonRelation'];
+
+        $qname="UPDATE details SET name='$name',employeeId='$employeeId',designation='$designation',dob='$dob',doj='$doj',gender='$gender',bloodGroup='$bloodGroup',martialStatus='$martialStatus',spouseOrHusbandName='$spouseOrHusbandName',languagesKnown='$languagesKnown',employeeContactNumber='$employeeContactNumber',email='$email',panNumber='$panNumber',passportNumber='$passportNumber',EPFNumber='$EPFNumber',insuranceNumber='$insuranceNumber',aadharNumber='$aadharNumber',bankAccountNumber='$bankAccountNumber',bankIfscCode='$bankIfscCode',religion='$religion',caste='$caste',numberOfSiblings='$numberOfSiblings',residentialAddress='$residentialAddress',placeOfArrival='$placeOfArrival',travelMode='$travelMode',fatherName='$fatherName',motherName='$motherName',fatherOccupation='$fatherOccupation',motherOccupation='$motherOccupation',annualIncome='$annualIncome',permanantAddress='$permanantAddress',parentContactNumber='$parentContactNumber',tenthSchoolName='$tenthSchoolName',tenthMark='$tenthMark',tenthPercentage='$tenthPercentage',tenthBoardOfStudy='$tenthBoardOfStudy',twelthSchoolName='$twelthSchoolName',twelthMark='$twelthMark',twelthPercentage='$twelthPercentage',twelthBoardOfStudy='$twelthBoardOfStudy',linkedinId='$linkedinId',skypeId='$skypeId',emergencyPersonName='$emergencyPersonName',employeeContactNumber='$employeeContactNumber',emergencyPersonRelation='$emergencyPersonRelation' WHERE employeeId='$employeeId1' ";
+            $equ=mysqli_query($connection,$qname);
             if($equ)
             {
-               echo($employeeId1."\n value");
-               echo ("\n  inserted successfully...");
+                echo "<script>alert('Value Updated')</script>";
             }
             else
             {
-                echo($employeeId1."\n value");
-                echo nl2br("\n not inserted");
-            } 
+                echo "<script>alert('Value Updated')</script>";
+            }
 
                
 
@@ -135,44 +119,45 @@ if(isset($_POST['update']))
 <title>ONEDATA</title>
 </head>
 
-<body class="" background="bg1.png">
-    <nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-           
-    <ul class="nav-item" style="padding-left:20px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
+<body class=""  >
+<div class="container">
+
+<nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+
+         
+    
+       <ul class="nav navbar-nav navbar-right">
+       <a href="updateId.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul> 
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-4"></div>
+        
+    
+</nav> 
   <form method="post" class="form-signin text-center justify-content-center" style="padding-top:10%;min-width:550px;" enctype="multipart/form-data">
   
     <div class="row justify-content-center">
             
 
             <?php
-            //$reg=$_POST['reg_no'];
-                $con=mysqli_connect("localhost","root","");
-                
-                mysqli_select_db($con,"onedata");
+                include 'connection.php';
                 $qry="SELECT * FROM details";
-                $result=mysqli_query($con,$qry);
+                $result=mysqli_query($connection,$qry);
                 //$count=0;
                 while($row = mysqli_fetch_array($result))
                 {
                     if($row[1]==$employeeId)
                     {
-                    echo '<img height="200" width="180" src="data:image;base64,'.$row[38].' ">';
+                    echo '<img height="200" width="180" src="data:image;base64,'.$row[43].' ">';
                     }
                 }
 
             ?>
 
     <div><br>
-        <h1 class="text-primary">EMPLOYEE DETAILS</h1><BR>
+        <h2 class="text-secondary">EMPLOYEE DETAILS</h2><br>
                 <div class="row">
                     <div class="col-7 text-left">
                         NAME: 
@@ -249,6 +234,14 @@ if(isset($_POST['update']))
                 </div><br>
                 <div class="row">
                     <div class="col-7 text-left">
+                        SPOUSE OR HUSBAND NAME: 
+                    </div>
+                    <div class="col-4 font-weight-bold text-left">
+                       <input type="text" value= <?php echo $copy[$i];$i++; ?> name="spouseOrHusbandName" >
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-7 text-left">
                         LANGUAGES KNOWN: 
                     </div>
                     <div class="col-4 font-weight-bold text-left">
@@ -257,7 +250,7 @@ if(isset($_POST['update']))
                 </div><br>
                 <div class="row">
                     <div class="col-7 text-left">
-                         CONTACT NUMBER: 
+                         PERSONAL CONTACT NUMBER: 
                     </div>
                     <div class="col-4 font-weight-bold text-left">
                        <input type="text" value= <?php echo $copy[$i];$i++; ?> name="employeeContactNumber" >
@@ -273,10 +266,42 @@ if(isset($_POST['update']))
                 </div><br>
                 <div class="row">
                     <div class="col-7 text-left">
+                         OFFICIAL CONTACT NUMBER: 
+                    </div>
+                    <div class="col-4 font-weight-bold text-left">
+                       <input type="text" value= <?php echo $copy[$i];$i++; ?> name="employeeOfficialContactNumber" >
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-7 text-left">
                         PAN CARD NUMBER:
                     </div>
                     <div class="col-4 font-weight-bold text-left">
                        <input type="text" value= <?php echo $copy[$i];$i++; ?> name="panNumber" >
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-7 text-left">
+                         PASSPORT NUMBER: 
+                    </div>
+                    <div class="col-4 font-weight-bold text-left">
+                       <input type="text" value= <?php echo $copy[$i];$i++; ?> name="passportNumber" >
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-7 text-left">
+                         EPF NUMBER: 
+                    </div>
+                    <div class="col-4 font-weight-bold text-left">
+                       <input type="text" value= <?php echo $copy[$i];$i++; ?> name="EPFNumber" >
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-7 text-left">
+                         INSURANCE NUMBER: 
+                    </div>
+                    <div class="col-4 font-weight-bold text-left">
+                       <input type="text" value= <?php echo $copy[$i];$i++; ?> name="insuranceNumber" >
                     </div>
                 </div><br>
                 <div class="row">
@@ -351,11 +376,8 @@ if(isset($_POST['update']))
                     <div class="col-4 font-weight-bold text-left">
                       <input type="text" value=  <?php echo $copy[$i];$i++; ?> name="travelMode" >
                     </div>
-                </div><br>
-<br>
-<br>
-<br>
-<h1 class="text-primary">PARENT DETAILS</h1>
+                </div><br> <br> 
+<h2 class="text-secondary">PARENT DETAILS</h2>
 <br>
                 <div class="row">
                     <div class="col-7 text-left">
@@ -412,10 +434,8 @@ if(isset($_POST['update']))
                     <div class="col-4 font-weight-bold text-left">
                       <input type="text" value=  <?php echo $copy[$i];$i++; ?> name="parentContactNumber" >
                     </div>
-                </div><br>
-
-<br>
-<h1 class="text-primary">ACADEMIC DETAILS</h1>
+                </div><br> <br>
+<h2 class="text-secondary">ACADEMIC DETAILS</h2>
 <br>
                 <div class="row">
                     <div class="col-7 text-left">
@@ -494,17 +514,41 @@ if(isset($_POST['update']))
                         SKYPE ID:
                     </div>
                     <div class="col-4 font-weight-bold text-left">
-                      <input type="text" value=  <?php echo $copy[$i];$i++; ?> name="skypeId">
+                      <input type="text" value=  <?php echo $copy[$i];$i++;$i++; ?> name="skypeId">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-7 text-left">
+                         PERSON NAME: 
+                    </div>
+                    <div class="col-4 font-weight-bold text-left">
+                       <input type="text" value= <?php echo $copy[$i];$i++; ?> name="emergencyPersonName" >
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-7 text-left">
+                         CONTACT NUMBER: 
+                    </div>
+                    <div class="col-4 font-weight-bold text-left">
+                       <input type="text" value= <?php echo $copy[$i];$i++; ?> name="emergencyPersonNumber" >
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-7 text-left">
+                         RELATION: 
+                    </div>
+                    <div class="col-4 font-weight-bold text-left">
+                       <input type="text" value= <?php echo $copy[$i];$i++; ?> name="emergencyPersonRelarion" >
                     </div>
                 </div><br>
 
 
 
 
-
                 <br><br><br>
-                <input type="submit" class="btn btn-outline-primary" value="Update" name="update"><br>
+                <input class="btn btn-lg btn-primary btn-block" style="background-image: linear-gradient(to left, #141f72,#2cb9f9)"; type="submit"  value="Update" name="update" > 
                 <p class="mt-5 mb-3 text-muted">&copy; ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</p>
 </form>
+</div>
 </body>
 </html>

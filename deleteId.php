@@ -1,30 +1,46 @@
 <?php 
 
-if(isset($_POST['submit']))
-{
-$employeeId=$_POST["employeeId"];
+if(isset($_POST['Submit']))
+{ 
+        include 'connection.php';
 
-include 'connection.php';
+        $employeeId=$_POST['employeeId'];
+        $flag="0";
+        include 'connection.php';
+        $qry="SELECT * FROM details";
+        $result=mysqli_query($connection,$qry);
+        //$count=0;
+        while($row = mysqli_fetch_array($result))
+        {
+          if($row[1]==$employeeId)
+          {
+                 $flag="1";    
+          }
+          
+        }
+        if($flag=="1")
+        {
+            $sql="DELETE FROM details WHERE employeeId='$employeeId' ";
+            $sql1="DELETE FROM degree WHERE employeeId='$employeeId' ";
+            $sql2="DELETE FROM technology WHERE employeeId='$employeeId' ";
+            $sql3="DELETE FROM experience WHERE employeeId='$employeeId' ";
+            $sql4="DELETE FROM reference WHERE employeeId='$employeeId' ";
 
-  
+            $result=mysqli_query($connection,$sql);
+            $result1=mysqli_query($connection,$sql1);
+            $result2=mysqli_query($connection,$sql2);
+            $result3=mysqli_query($connection,$sql3);  
+            $result4=mysqli_query($connection,$sql4);
 
-$sql="DELETE FROM details WHERE employeeId='$employeeId' ";
-$sql1="DELETE FROM degree WHERE employeeId='$employeeId' ";
-$sql2="DELETE FROM technology WHERE employeeId='$employeeId' ";
-$sql3="DELETE FROM experience WHERE employeeId='$employeeId' ";
-$sql4="DELETE FROM reference WHERE employeeId='$employeeId' ";
+           if($result)
+              echo "<script>alert('deleted successfully')</script>"; 
+           
+        }
+        else
+            echo "<script>alert('Invalid EmployeeID')</script>";
 
-$result=mysqli_query($connection,$sql);
-$result1=mysqli_query($connection,$sql1);
-$result2=mysqli_query($connection,$sql2);
-$result3=mysqli_query($connection,$sql3);  
-$result4=mysqli_query($connection,$sql4);
 
- if($result)
-    echo "<script>alert('deleted successfully')</script>"; 
- else
-    echo "<script>alert('Invalid employee ID')</script>"; 
- }
+}
 
  ?>
 
@@ -44,51 +60,14 @@ $result4=mysqli_query($connection,$sql4);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-footer {
-    position: relative;
-    height: 0px;
-    bottom: 110px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-    text-size:1px;
-.button {
-  position: relative;
-  background-color: #4CAF50;
-  border: none;
-  font-size: 28px;
-  color: #FFFFFF;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
 
-.button:after {
-  content: "";
-  background: #90EE90;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px!important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
+body {
+  background: url('EIS_Employee-ID-BG.jpg');
+  background-repeat:no-repeat;
 
-.button:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
-    
-}
+  background-size:cover;
+ } 
+
 .align-center{
 text-align: center;
 
@@ -96,51 +75,60 @@ text-align: center;
 </style>
 <title>ONEDATA  </title>
 </head>
-<nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-           
-    <ul class="nav-item" style="padding-left:20px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
-<body class="" background="bg1.png">
+
+<nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+
+         
+    
+       <ul class="nav navbar-nav navbar-right">
+       <a href="main.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul> 
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-4"></div>
+        
+    
+</nav> 
+<body class="" background="EIS_Employee-ID-BG.jpg">
+
+
 <form method="post" action="">
-<div class="row" style="margin-top: 250px">
-		    <div class="col-md-4"></div>
-				<div class="col-md-4">
-				<h3 style="padding-top:0px">EMPLOYEE ID:</h3>
-				</div>
-		</div>
-		<br><br>
-		<div class="row">
-		     <div class="col-md-4"></div>
-				<div class="col-md-4">
-				<input type="text" name="employeeId" class="form-control" placeholder="Employee ID" required>
+<div class="container">
+<div class="row" style="margin-top: 200px">
+        <div class="col-md-5"></div>
+        <div class="col-md-2">
+        <h3 style="padding-left:25px;  width:210px;" >EMPLOYEE ID</h3>
+        </div>
+    </div></div>
+    <br><br>
+    <div class="container">
+    <div class="row">
+         <div class="col-md-5"></div>
+        <div class="col-md-2">
+        <input type="text" name="employeeId" class="form-control " style="width:210px;" placeholder="Enter Employee ID" required>
 
-				</div>
-		</div>
+        </div>
+    </div>
 
-       <br><br>
-		<div class="row">
-		     <div class="col-md-4"></div>
-				<div class="col-md-4">
-				<input type="submit" class="btn btn-lg btn btn-outline-primary btn-block" name="submit" value="DELETE">
-				</div>
-		</div>
+       <br>
+        <div class="row">
+         <div class="col-md-5"></div>
+         <div class="col-md-2">
+         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; type="submit"  value="Submit"name="Submit" onclick="return confirm('Are you sure you want to delete this item?');" ><br><br></center>
+    
+            </div>
+        </div>
+    </div>
+</div>
 
-
-</div>	
-
+</div>
 </form>
+</div>
 </body>
-		<footer style="top:180px; margin-top: 135px">
-			<p class="mt-2 mb-3 text-center" >&copy; ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</p>
-		</footer>
+    <footer style="top:180px; margin-top: 135px">
+      <p class="mt-2 mb-3 text-center" >&copy; Onedata Software Solution Pvt Ltd</p>
+    </footer>
 
 
 

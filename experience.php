@@ -6,16 +6,8 @@
  if(isset($_POST['submit']))
  {
 
-
- $connect = mysqli_connect("localhost", "root", "");
- if(mysqli_select_db($connect,"onedata"))
- {
- 	//echo "db connected";
- }
- else
- {
- 	echo "db not connected";
- }
+ include 'connection.php';
+  
  
  $number = count($_POST["companyName"]);
 
@@ -32,7 +24,7 @@
            if(trim($_POST["companyName"][$i] != ''))  
            {  
                 $sql = "INSERT INTO experience(employeeId,companyName,designation,totalExperienceYears,dateOfJoined,dateOfRelived) VALUES('$employeeId','$companyName[$i]','$designation[$i]','$totalExperienceYears[$i],'$dateOfJoined[$i]','$dateOfRelived[$i]')";  
-                mysqli_query($connect, $sql);  
+                mysqli_query($connection, $sql);  
            }  
       }  
       echo "<script>alert('EXPERIENCE Details Added Successfully')</script>";  
@@ -65,19 +57,20 @@
 
 
 	</head>
-	<body class="" background="bg1.png">
- <nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-           
-    <ul class="nav-item" style="padding-left:20px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
+	<body class="" background="bg1.png"><nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+
+         
+    
+       <ul class="nav navbar-nav navbar-right">
+       <a href="insertDetailsMenu.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul> 
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-4"></div>
+        
+    
+</nav> 
 		<div class="container">
 			<br /><br /><br /><br /> <br /> <br />
 			<h2 align="center">EXPERIENCE INFORMATION</a></h2>
@@ -89,7 +82,7 @@
                                <table class="table table-bordered" id="dynamic_field">  
                                     <tr><td><input type="text" name="companyName[]" placeholder="Company Name" class="form-control name_list" / required></td>  
                                     <tr><td><input type="text" name="designation[]" placeholder="Your Designation " class="form-control name_list" / required></td>  
-                                      <tr><td><input type="text" name="totalExperienceYears[]" placeholder="Number of Experiences " class="form-control name_list" / required></td>
+                                      <tr><td><input type="text" name="totalExperienceYears[]" placeholder="Number of years Experiences " class="form-control name_list" / required></td>
                                       <tr><td>  <label for="cgpa">Date of Joined</label></td>
                                     <tr><td><input type="date" name="dateOfJoined[]"  class="form-control name_list" / required></td>  
                                       <tr><td>  <label for="cgpa">Date of releaved</label></td>
@@ -97,7 +90,7 @@
                                     <tr><td><button type="button" name="add" id="add" class="btn btn-outline-SECONDARY">ADD EXPERIENCE</button></td>  
                                     </tr>  
                                </table>  
-                               <input type="submit" name="submit" id="submit" class="btn btn-outline-primary" value="SUBMIT" />  
+                               <input type="submit" name="submit" id="submit" class="btn btn-outline-primary" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; value="SUBMIT" />  
                           </div>  
                      </form>  
                 </div>  
@@ -112,7 +105,7 @@
            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="companyName[]" placeholder="Company Name" class="form-control name_list" / ></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
            
            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="designation[]" placeholder="Your Designation " class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>'); 
-           $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="no_Of_Year[]" placeholder="Your Designation " class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>'); 
+           $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="no_Of_Year[]" placeholder="Number of years Experiences " class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>'); 
            $('#dynamic_field').append('<tr><td>  <label id="row'+i+'" for="cgpa">Date of Joined</label></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td><tr id="row'+i+'"><td><input type="date" name="fromDate[]"  class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
            
            $('#dynamic_field').append('<tr><td>  <label id="row'+i+'" for="cgpa">Date of releaved</label></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td><tr id="row'+i+'"><td><input type="date" name="toDate[]" p class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');

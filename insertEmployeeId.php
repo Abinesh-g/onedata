@@ -5,33 +5,15 @@ if(isset($_POST['Submit']))
 
 
         $employeeId=$_POST['employeeId'];
-        $flag="0";
+
         include 'connection.php';
-        $qry="SELECT * FROM details";
+        $qry="INSERT INTO employeeid(employeeId) VALUES('$employeeId') ";
         $result=mysqli_query($connection,$qry);
-        //$count=0;
-        while($row = mysqli_fetch_array($result))
-        {
-          if($row[1]==$employeeId)
-          {
-                 $flag="1";    
-          }
-          
-        }
-        if($flag=="1")
-        {
-            session_start();
-            $employeeId=$_POST['employeeId'];
-            $_SESSION['employeeId']=$employeeId;
-            header("location:updateDetails.php");
-        }
+        
+        if($result)       
+          echo "<script>alert('EmployeeID Inserted Successfully')</script>";
         else
-            echo "<script>alert('Invalid EmployeeID')</script>";
-
-
-
-
-
+          echo "<script>alert('EmployeeID not inserted ')</script>";
 
 
 

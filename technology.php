@@ -6,16 +6,7 @@
  if(isset($_POST['submit']))
  {
 
-
- $connect = mysqli_connect("localhost", "root", "");
- if(mysqli_select_db($connect,"onedata"))
- {
- 	//echo "db connected";
- }
- else
- {
- 	echo "db not connected";
- }
+ include 'connection.php';
  
  $number = count($_POST["technology"]);
 
@@ -30,7 +21,7 @@
            if(trim($_POST["technology"][$i] != ''))  
            {  
                 $sql = "INSERT INTO technology(employeeId,technology,rate,certification) VALUES('$employeeId','$technology[$i]','$rate[$i]','$certification[$i]')";  
-                mysqli_query($connect, $sql);  
+                mysqli_query($connection, $sql);  
            }  
       }  
      echo "<script>alert('TECHNOLOGY Details Added Successfully')</script>";  
@@ -63,19 +54,20 @@
 
 
 	</head>
-	<body class="" background="bg1.png">
- <nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-           
-    <ul class="nav-item" style="padding-left:20px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
+	<body class="" background="bg1.png"><nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+
+         
+    
+       <ul class="nav navbar-nav navbar-right">
+       <a href="insertDetailsMenu.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul> 
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-4"></div>
+        
+    
+</nav> 
 		<div class="container">
 			<br /><br /><br /><br /><br /><br />
 			<h2 align="center">TECHNOLOGY & TOOLS INFORMATION</a></h2>
@@ -91,7 +83,7 @@
                                     <tr><td><button type="button" name="add" id="add" class="btn btn-outline-SECONDARY">ADD TECHNOLOGY</button></td>  
                                     </tr>  
                                </table>  
-                               <input type="submit" name="submit" id="submit" class="btn btn-outline-primary" value="SUBMIT" />  
+                               <input type="submit" name="submit" id="submit" class="btn btn-outline-primary"style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; value="SUBMIT" />  
                           </div>  
                      </form>  
                 </div>  

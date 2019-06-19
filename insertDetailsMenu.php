@@ -39,15 +39,20 @@ if(isset($_POST['softcopy']))
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-footer {
-    position: relative;
-    height: 0px;
-    bottom: 110px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-    text-size:1px;
+footer { 
     
+}
+ 
+ body {
+  background: url('Element-BG-06.jpg');
+  background-repeat:no-repeat;
+
+  background-size:cover;
+ } 
+ .center {
+  margin: auto;
+  width:250px;
+  padding: 10px;
 }
 .align-center{
 text-align: center;
@@ -57,41 +62,47 @@ text-align: center;
 <title>ONEDATA  </title>
 </head>
 
-<body class="" background="bg1.png">
+<body  >
 
-<nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-            
-    <ul class="nav-item" style="padding-left:30px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
 
-<nav>
+<nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+
+         
+    
+       <ul class="nav navbar-nav navbar-right">
+       <a href="insertId.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul> 
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-4"></div>
+        
+    
+</nav> 
 <form method="post" style="padding-top:93px">
-<div class="wrapper">
-            <!-- Sidebar Holder -->
-            <nav id="sidebar" class="bg-primary" >
+<br><br><br><br><br>
+<!-- <div class="wrapper"> 
+            <nav id="side bar" class="text-light" >
                 <ul class="list-unstyled components">
-                    <li class="bg-primary">
-                        <input type="submit" class="btn btn-md btn-primary btn-block text-left" value="INSERT DETAILS"  name="insert">
-                        <input type="submit" class="btn btn-md btn-primary btn-block text-left" value="INSERT DEGREE DETAILS"name="degree">
-                        <input type="submit" class="btn btn-md btn-primary btn-block text-left" value="INSERT EXPERIENCE DETAILS" name="experience">
-                        
-                        <input type="submit" class="btn btn-md btn-primary btn-block text-left" value="INSERT TECHNOLOGY & TOOLS " name="technology">
-                        <input type="submit" class="btn btn-md btn-primary btn-block text-left" value="INSERT REFERENCE DETAILS" name="reference">
-                         <input type="submit" class="btn btn-md btn-primary btn-block text-left" value="INSERT SOFTCOPY DETAILS"  name="softcopy">
-                    </li>
+                    <li class="text-white"><br><br><br> -->
+                    <div class="row">
+                    <div class="col-md-5"></div>
+                    
+                    <div class="col-md-2.5">
+                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT DETAILS"  name="insert">
+                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT DEGREE DETAILS"name="degree">
+                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT EXPERIENCE DETAILS" name="experience">                        
+                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT TECHNOLOGY & TOOLS " name="technology">
+                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT REFERENCE DETAILS" name="reference">
+                         <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT SOFTCOPY DETAILS"  name="softcopy">
+                    </div></div><br><br><br><br><br>
+
+                    <!-- </li>
                 </ul>
                 </div>
             </nav>
 
-</div>
+</div> -->
 </form>
 </nav>
 </body>

@@ -3,6 +3,10 @@ if(isset($_POST['insert']))
 {
     header("location: insertId.php"); 
 }
+if(isset($_POST['insertEmployeeId']))
+{
+    header("location: insertEmployeeId.php"); 
+}
 if(isset($_POST['view']))
 {
     header("location: viewId.php");   
@@ -36,62 +40,61 @@ if(isset($_POST['export']))
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-footer {
-    position: relative;
-    height: 0px;
-    bottom: 110px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-    text-size:1px;
+footer { 
+
     
+} 
+ body {
+  background: url('EIS_Admin-Bg-06.jpg');
+  background-repeat:no-repeat;
+
+  background-size:cover;
+ } 
+ .center {
+  margin: auto;
+  width:250px;
+  padding: 10px;
 }
 </style>
 <title>ONEDATA </title>
 </head>
 
-<body class="" background="bg1.png">
+<body>
 
+<div class="container">
 
-<nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-            
-    <ul class="nav-item" style="padding-left:30px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
+ <nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
 
+       <div class="container-fluid">
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-3"></div>
+     <ul class="nav navbar-nav navbar-right">
+       <a href="index.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+    </ul> 
+  </nav>
 
 
 <nav>
-<form method="post" style="padding-top:93px">
-<div class="wrapper">
-            <!-- Sidebar Holder -->
-            <nav id="sidebar" class="bg-primary" >
-                <ul class="list-unstyled components">
-                    <li class="bg-primary">
-                        <input type="submit" class="btn btn-md btn-primary btn-block text-left" value="INSERT DETAILS"  name="insert">
-                        <input type="submit" class="btn btn-md btn-primary btn-block text-left" value="VIEW DETAILS"  name="view">
-                        <input type="submit" class="btn btn-md btn-primary btn-block text-left" value="UPDATE DETAILS" name="update">
-                        <input type="submit" class="btn btn-md btn-primary btn-block text-left" value="DELETE DETAILS" name="delete">
-                        <input type="submit" class="btn btn-md btn-primary btn-block text-left" value="COPY DATA TO EXCEL" name="export">
-                    </li>
-                </ul>
-                </div>
-            </nav>
-
-</div>
+<form method="post" style="padding-top:100px" action="">
+  <div class="center">
+     
+         
+        <input class="btn btn-secondary btn-block" type="submit" value="INSERT DETAILS" style="height:35px;" name="insert" ><br>
+        <input class="btn btn-secondary btn-block" type="submit" value="INSERT EMPLOYEE ID"style="height:35px;" name="insertEmployeeId" ><br>
+        <input class="btn btn-secondary btn-block" type="submit" value="VIEW DETAILS"style="height:35px;" name="view" ><br>
+        <input class="btn btn-secondary btn-block" type="submit" value="UPDATE DETAILS"style="height:35px;" name="update" ><br>
+        <input class="btn btn-secondary btn-block" type="submit" value="DELETE DETAILS"style="height:35px;" name="delete" ><br>
+        <input class="btn btn-secondary btn-block" type="submit" value="EXPORT DATA TO EXCEL"style="height:35px;" name="export" ><br><br><br><br><br> 
+</div>     
 </form>
 </nav>
 
-</body>
-
-<footer style="top:180px;">
-<p class="mt-2 mb-3 text-center" >&copy; ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</p>
+<footer style="padding-bottom: 0%;">
+<p class="mt-2 mb-3 text-center" >&copy; Onedata Software Solution Pvt Ltd. All Rights Reserved</p>
 </footer>
+
+</div>   
+</body>
 </html>

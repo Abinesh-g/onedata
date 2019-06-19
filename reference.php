@@ -6,17 +6,8 @@
  if(isset($_POST['submit']))
  {
 
+ include 'connection.php';
 
- $connect = mysqli_connect("localhost", "root", "");
- if(mysqli_select_db($connect,"onedata"))
- {
- 	//echo "db connected";
- }
- else
- {
- 	echo "db not connected";
- }
- 
  $number = count($_POST["name"]);
 
  $name=$_POST['name'];
@@ -31,7 +22,7 @@
            if(trim($_POST["name"][$i] != ''))  
            {  
                 $sql = "INSERT INTO reference(employeeId,name,designation,organization,contactNumber,email) VALUES('$employeeId','$name[$i]','$designation[$i]','$organization[$i]','$contactNumber[$i]','$email[$i]')";  
-                mysqli_query($connect, $sql);  
+                mysqli_query($connection, $sql);  
            }  
       }  
       echo "<script>alert('REFERENCE Details Added Successfully')</script>";  
@@ -64,19 +55,20 @@
 
 
 	</head>
-	<body class="" background="bg1.png">
- <nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-           
-    <ul class="nav-item" style="padding-left:20px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
+	<body class="" background="bg1.png"><nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+
+         
+    
+       <ul class="nav navbar-nav navbar-right">
+       <a href="insertDetailsMenu.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul> 
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-4"></div>
+        
+    
+</nav> 
 		<div class="container">
 			<br /><br /><br /><br /><br /><br />
 			<h2 align="center">REFERENCE INFORMATION</a></h2>
@@ -87,14 +79,14 @@
                           <div class="table-responsive">  
                                <table class="table table-bordered" id="dynamic_field">  
                                     <tr><td><input type="text" name="name[]" placeholder="Enter name" class="form-control name_list" / required></td>  
-                                    <tr><td><input type="text" name="designation[]" placeholder="Enter your designation " class="form-control name_list" / required></td>  
+                                    <tr><td><input type="text" name="designation[]" placeholder="Enter designation " class="form-control name_list" / required></td>  
                                     <tr><td><input type="text" name="organization[]" placeholder="Enter organization name" class="form-control name_list" / required></td>  
                                     <tr><td><input type="number" name="contactNumber[]" placeholder="Enter contact number" class="form-control name_list" /required></td> 
-                                    <tr><td><input type="email" name="email[]" placeholder="Enter email" class="form-control name_list" /required></td>
+                                    <tr><td><input type="email" name="email[]" placeholder="Enter Email" class="form-control name_list" /required></td>
                                     <tr><td><button type="button" name="add" id="add" class="btn btn-outline-SECONDARY">ADD REFERENCE</button></td>  
                                     </tr>  
                                </table>  
-                               <input type="submit" name="submit" id="submit" class="btn btn-outline-primary" value="Submit" />  
+                               <input type="submit" name="submit" id="submit" class="btn btn-outline-primary" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; value="Submit" />  
                           </div>  
                      </form>  
                 </div>  
@@ -108,11 +100,11 @@
            i++; 
            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Enter name" class="form-control name_list" / ></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
            
-           $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="designation[]" placeholder="Enter your designation" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>'); 
+           $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="designation[]" placeholder="Enter designation" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>'); 
            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="organisation[]" placeholder="Enter organization detail" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
            
            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="number" name="contactNumber[]" placeholder="Enter contact number" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
-            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="email" name="email[]" placeholder="Enter email" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="email" name="email[]" placeholder="Enter Email" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
 
       });  
       $(document).on('click', '.btn_remove', function(){  

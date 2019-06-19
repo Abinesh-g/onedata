@@ -15,8 +15,9 @@ if(isset($_POST['viewSoftcopy']))
 
 
 ?>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
     
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -30,98 +31,55 @@ if(isset($_POST['viewSoftcopy']))
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-footer {
-    position: relative;
-    height: 0px;
-    bottom: 110px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-    text-size:1px;
-.button {
-  position: relative;
-  background-color: #4CAF50;
-  border: none;
-  font-size: 28px;
-  color: #FFFFFF;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
+footer {  
+} 
+ body {
+  background: url('EIS_Admin-Bg-06.jpg');
+  background-repeat:no-repeat;
 
-.button:after {
-  content: "";
-  background: #90EE90;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px!important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
-
-.button:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
-    
-}
-.align-center{
-text-align: center;
-
+  background-size:cover;
+ } 
+ .center {
+  margin: auto;
+  width:250px;
+  padding: 10px;
 }
 </style>
-<title>ONEDATA  </title>
+<title>ONEDATA </title>
 </head>
-<body class="" background="bg1.png">
-<nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-            
-    <ul class="nav-item" style="padding-left:30px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
 
-<form method="post" action="">
+<body>
 
-		<br><br>
+<div class="container">
 
-       <br><br><br><br><br><br><br><br>
-		<div class="row">
-		     <div class="col-md-4"></div>
-				<div class="col-md-4">
-				<input type="submit" class="btn btn-lg btn btn-outline-primary btn-block" name="viewDetails" value="VIEW DETAILS">
-				</div>
-		</div><br><br><br><br>
-    <div class="row">
-         <div class="col-md-4"></div>
-        <div class="col-md-4">
-        <input type="submit" class="btn btn-lg btn btn-outline-primary btn-block" name="viewSoftcopy" value="VIEW SOFTCOPY">
-        </div>
-    </div>
+<nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+
+         
+    
+       <ul class="nav navbar-nav navbar-right">
+       <a href="viewId.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul> 
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-4"></div>
+        
+    
+</nav> 
 
 
-</div>	
+
+<nav>
+<form method="post" style="padding-top:150px" action="">
+  <div class="center">
+     
+         <br><br><br>
+        <input class="btn btn-secondary btn-block" type="submit" value="VIEW DETAILS" style="height:35px;" name="viewDetails" ><br>
+        <input class="btn btn-secondary btn-block" type="submit" value="VIEW SOFTCOPY"style="height:35px;" name="viewSoftcopy" ><br> 
+</div>     
 </form>
+</nav> 
+
+</div>   
 </body>
-		<footer style="top:180px; margin-top: 135px">
-			<p class="mt-2 mb-3 text-center" >&copy; ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</p>
-		</footer>
-
-
-
 </html>

@@ -1,17 +1,17 @@
 <?php  
 //export.php  
-$connect = mysqli_connect("localhost", "root", "", "onedata");
+include 'connection.php'; 
 $output = '';
 if(isset($_POST["export"]))
 {
  $query = "SELECT * FROM details ORDER BY `details`.employeeId,`NAME` ASC";
- $result = mysqli_query($connect, $query);
+ $result = mysqli_query($connection, $query);
  if(mysqli_num_rows($result) > 0)
  {
   $output .= '
    <table class="table" bordered="1">  
                     <tr>  
-                          <th>NAME</th><th>EMPLOYEE ID</th><th>DESIGNATION</th><th>DATE OF BIRTH</th><th>DATE OF JOINING</th><th>GENDER</th><th>BLOODGROUP</th><th>MARTIAL STATUS</th><th>LANGUAGES KNOWN</th><th>CONTACT NUMBER</th><th>EMAIL ID</th><th>PAN CARD NUMBER</th>
+                          <th>NAME</th><th>EMPLOYEE ID</th><th>DESIGNATION</th><th>DATE OF BIRTH</th><th>DATE OF JOINING</th><th>GENDER</th><th>BLOODGROUP</th><th>MARTIAL STATUS</th><th>SPOUSE OR HUSBAND NAME</th><th>LANGUAGES KNOWN</th><th>PERSONAL CONTACT NUMBER</th><th>EMAIL ID</th><th>OFFICIAL CONTACT NUMBER</th><th>PAN CARD NUMBER</th><th>PASSPORT NUMBER</th><th>EPF-NUMBER</th><th>INSURANCE NUMBER</th>
             <th>AADHAR CARD NUMBER</th><th>BANK ACCOUNT NUMBER</th><th>BANK IFSC CODE</th><th>RELIGION</th>
             <th>CASTE</th>
             <th>NUMBER OF SIBLINGS</th><th>RESIDENTIAL ADDRESS</th>
@@ -20,7 +20,7 @@ if(isset($_POST["export"]))
             <th>ANNUAL INCOME</th><th>ADDRESS</th>
             <th>CONTECT NUMBER</th><th>NAME OF SCHOOL</th>
             <th>10TH MARK</th><th>10TH PERCENTAGE</th><th>10TH BOARD</th><th>NAME OF SCHOOL</th><th>12TH MARK</th><th>12TH PERCENTAGE</th>
-            <th>12TH BOARD</th><th>LINKEDIN ID</th><th>SKYPE ID</th>
+            <th>12TH BOARD</th><th>LINKEDIN ID</th><th>SKYPE ID</th><th>EMERGENCY CONTACT PERSON NAME</th><th>EMERGENCY CONTACT PERSON NUMBER</th><th>EMERGENCY CONTACT RELATION TYPE</th>
                     </tr>
   ';
   while($row = mysqli_fetch_array($result))
@@ -36,10 +36,20 @@ if(isset($_POST["export"]))
 <td>'.$row["gender"].'</td>
 <td>'.$row["bloodGroup"].'</td>
 <td>'.$row["martialStatus"].'</td>
+<td>'.$row["spouseOrHusbandName"].'</td>
+
 <td>'.$row["languagesKnown"].'</td>
 <td>'.$row["employeeContactNumber"].'</td>
 <td>'.$row["email"].'</td>
+
+<td>'.$row["employeeOfficialContactNumber"].'</td>
+
 <td>'.$row["panNumber"].'</td>
+
+<td>'.$row["passportNumber"].'</td>
+<td>'.$row["EPFNumber"].'</td>
+<td>'.$row["insuranceNumber"].'</td>
+
 <td>'.$row["aadharNumber"].'</td>
 <td>'.$row["bankAccountNumber"].'</td>
 <td>'.$row["bankIfscCode"].'</td>
@@ -68,6 +78,11 @@ if(isset($_POST["export"]))
 <td>'.$row["twelthBoardOfStudy"].'</td>
 <td>'.$row["linkedinId"].'</td>
 <td>'.$row["skypeId"].'</td>
+
+
+<td>'.$row["emergencyPersonName"].'</td>
+<td>'.$row["emergencyPersonNumber"].'</td>
+<td>'.$row["emergencyPersonRelation"].'</td>
 
                     </tr>
    ';

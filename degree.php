@@ -9,15 +9,9 @@
  if(isset($_POST['submit']))
  {
 
- $connect = mysqli_connect("localhost", "root", "");
- if(mysqli_select_db($connect,"onedata"))
- {
- 	//echo "db connected";
- }
- else
- {
- 	echo "db not connected";
- }
+include 'connection.php';
+
+ 
  
  $number = count($_POST["degree"]);
 
@@ -35,7 +29,7 @@
            if(trim($_POST["degree"][$i] != ''))  
            {  
                 $sql = "INSERT INTO degree(employeeId,degree,department,cgpa,institutionName,universityName,yearOfPassing,projectDetails) VALUES('$employeeId','$degree[$i]','$dept[$i]','$cgpa[$i]','$institution[$i]','$university[$i]','$year[$i]','$project[$i]')";  
-                mysqli_query($connect, $sql);  
+                mysqli_query($connection, $sql);  
            }  
       }  
       echo "<script>alert('Degree Details Added Successfully')</script>";  
@@ -69,18 +63,20 @@
 
 	</head>
 	<body class="" background="bg1.png">
- <nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-           
-    <ul class="nav-item" style="padding-left:30px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
+ <nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+
+         
+    
+       <ul class="nav navbar-nav navbar-right">
+       <a href="insertDetailsMenu.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul> 
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-4"></div>
+        
+    
+</nav> 
 		<div class="container">
 			<br />
 			<br /><br />
@@ -100,10 +96,10 @@
                                     <tr><td><input type="text" name="university[]" placeholder="Enter University Name" class="form-control name_list" /required></td>  
                                     <tr><td><input type="text" name="year[]" placeholder="Enter year of passing " class="form-control name_list" /required></td> 
                                     <tr><td><input type="text" name="project[]" placeholder="Enter your project details" class="form-control name_list" /required></td>  
-                                    <tr><td><button type="button" name="add" id="add" class="btn btn-outline-secondary">ADD DEGREE</button></td>  
+                                    <tr><td><button type="button" name="add" id="add"  class="btn btn-outline-secondary">ADD DEGREE</button></td>  
                                     </tr>  
                                </table>  
-                               <input type="submit" name="submit" id="submit" value="SUBMIT" class = "btn btn-outline-primary value="Submit" />  
+                               <input type="submit" name="submit" id="submit" value="SUBMIT" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; class = "btn btn-outline- value="Submit" />  
                           </div>  
                      </form>  
                 </div>  
@@ -117,7 +113,7 @@
            i++; 
            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="degree[]" placeholder="Enter your degree" class="form-control name_list" / ></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
            
-           $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="dept[]" placeholder="Enter your dept" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>'); 
+           $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="dept[]" placeholder="Enter your department" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>'); 
            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="cgpa[]" placeholder="Enter your cgpa/percentage" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
            
            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="institution[]" placeholder="Enter institution name" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');

@@ -1,7 +1,8 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "", "onedata");
+include 'connection.php';
+ 
 $sql = "SELECT * FROM details ORDER BY `details`.employeeId,`NAME` ASC";  
-$result = mysqli_query($connect, $sql);
+$result = mysqli_query($connection, $sql);
 ?>
 <html>  
  <head> 
@@ -18,28 +19,33 @@ $result = mysqli_query($connect, $sql);
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
  </head>  
- <body class="" background="bg1.png"></body>
-<nav class="navbar fixed-top navbar-expand-sm bg-primary navbar-dark">
-           
-    <ul class="nav-item" style="padding-left:20px;">
-        <img src="onedata.png" alt="Logo" style="width:180px;">
-    </ul>
-    <center>
-    <ul class="nav-item justify-content-center" >
-        <div class="col-md-12">
-        <a class="navbar-brand justify-content-center display-1 mb-1 font-weight-normal align-center" style="font-size:25px;" href="#">ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</a>
-        </div>
-    </ul></center>
-</nav>
-  <div class="container">  
+ <body > 
+<div class="container">
+
+<nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+
+         
+    
+       <ul class="nav navbar-nav navbar-right">
+       <a href="main.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul> 
+       <div class="col-md-5"></div>
+        <div class="col-md-3">
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+        <div class="col-md-4"></div>
+        
+    
+</nav> 
+
+    <form method="post" action="export.php">  
    <br />  
    <br />  
    <br />  
    <div class="table-responsive">  
-    <h2 align="center">EXPORT DATA TO EXCEL FORMAT</h2><br /> 
+    <h3 align="center">EXPORT DATA TO EXCEL FORMAT</h3><br /> 
     <table class="table table-bordered">
      <tr>  
-                        <th>NAME</th><th>EMPLOYEE ID</th><th>DESIGNATION</th><th>DATE OF BIRTH</th><th>DATE OF JOINING</th><th>GENDER</th><th>BLOODGROUP</th><th>MARTIAL STATUS</th><th>LANGUAGES KNOWN</th><th>CONTACT NUMBER</th><th>EMAIL ID</th><th>PAN CARD NUMBER</th>
+                        <th>NAME</th><th>EMPLOYEE ID</th><th>DESIGNATION</th><th>DATE OF BIRTH</th><th>DATE OF JOINING</th><th>GENDER</th><th>BLOODGROUP</th><th>MARTIAL STATUS</th><th>SPOUSE OR HUSBAND NAME</th><th>LANGUAGES KNOWN</th><th>PERSONAL CONTACT NUMBER</th><th>EMAIL ID</th><th>OFFICIAL CONTACT NUMBER</th><th>PAN CARD NUMBER</th><th>PASSPORT NUMBER</th><th>EPF-NUMBER</th><th>INSURANCE NUMBER</th>
 						<th>AADHAR CARD NUMBER</th><th>BANK ACCOUNT NUMBER</th><th>BANK IFSC CODE</th><th>RELIGION</th>
 						<th>CASTE</th>
             <th>NUMBER OF SIBLINGS</th><th>RESIDENTIAL ADDRESS</th>
@@ -48,7 +54,7 @@ $result = mysqli_query($connect, $sql);
 						<th>ANNUAL INCOME</th><th>ADDRESS</th>
 						<th>CONTECT NUMBER</th><th>NAME OF SCHOOL</th>
 						<th>10TH MARK</th><th>10TH PERCENTAGE</th><th>10TH BOARD</th><th>NAME OF SCHOOL</th><th>12TH MARK</th><th>12TH PERCENTAGE</th>
-						<th>12TH BOARD</th><th>LINKEDIN ID</th><th>SKYPE ID</th>
+						<th>12TH BOARD</th><th>LINKEDIN ID</th><th>SKYPE ID</th><th>EMERGENCY-CONTACT PERSON NAME</th><th>EMERGENCY-CONTACT PERSON NUMBER</th><th>EMERGENCY-CONTACT RELATION TYPE</th>
                     </tr>
      <?php
      while($row = mysqli_fetch_array($result))  
@@ -63,10 +69,17 @@ $result = mysqli_query($connect, $sql);
 <td><?=$row["gender"];?></td>
 <td><?=$row["bloodGroup"];?></td>
 <td><?=$row["martialStatus"];?></td>
+
+<td><?=$row["spouseOrHusbandName"];?></td> 
+
 <td><?=$row["languagesKnown"];?></td>
-<td><?=$row["employeeContactNumber"];?></td>
+<td><?=$row["employeeContactNumber"];?></td> 
 <td><?=$row["email"];?></td>
-<td><?=$row["panNumber"];?></td>
+<td><?=$row["employeeOfficialContactNumber"];?></td>
+<td><?=$row["panNumber"];?></td> 
+<td><?=$row["passportNumber"];?></td>
+<td><?=$row["EPFNumber"];?></td>
+<td><?=$row["insuranceNumber"];?></td> 
 <td><?=$row["aadharNumber"];?></td>
 <td><?=$row["bankAccountNumber"];?></td>
 <td><?=$row["bankIfscCode"];?></td>
@@ -95,20 +108,24 @@ $result = mysqli_query($connect, $sql);
 <td><?=$row["twelthBoardOfStudy"];?></td>
 <td><?=$row["linkedinId"];?></td>
 <td><?=$row["skypeId"];?></td>
+
+<td><?=$row["emergencyPersonName"];?></td>
+<td><?=$row["emergencyPersonNumber"];?></td>
+<td><?=$row["emergencyPersonRelation"];?></td>
+
        </tr>  
         <?php  
      }
      ?>
     </table>
     <br />
-    <form method="post" action="export.php">
     <center>
-     <input type="submit" name="export" class="btn btn-outline-primary" value="EXPORT DETAILS" />
+     <input type="submit" name="export" class="btn btn-secondary" value="EXPORT DETAILS" />
     <p class="mt-5 mb-3 text-muted">&copy; ONEDATA SOFTWARE SOLUTION PRIVATE SOLUTION</p>
     </center>
     </form>
    </div>  
-  </div>  
+  </div> 
  </body>  
 </html>
 
