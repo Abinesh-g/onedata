@@ -1,8 +1,8 @@
 <?php
 
-$connection = mysqli_connect("localhost", "root", "");
+$connection = mysqli_connect("localhost", "root", "OdS@0123");
 
- if(mysqli_select_db($connection,"onedata"))
+ if(mysqli_select_db($connection,"employee"))
  {
  	//echo "db connected";
  }
