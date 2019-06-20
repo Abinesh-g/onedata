@@ -4,25 +4,19 @@ if(isset($_POST['Submit']))
 {
 
 
-        $employeeId=$_POST['employeeId'];
-        echo "<script>console.log('Employee ID - " . $employeeId . "')</script>";
+        $employeeId=$_POST['employeeId'];  
         $flag="0";
         include 'connection.php';
         $qry="SELECT * FROM employeeid";
-        $result=mysqli_query($connection,$qry);
-        //$count=0;
-
-        echo "<script>console.log('DB Employee IDs -')</script>";
+        $result=mysqli_query($connection,$qry); 
         while($row = mysqli_fetch_array($result))
-        {
-          echo "<script>console.log('" . $row[0] . "')</script>";
+        { 
           if($row[0]==$employeeId)
           {
                  $flag="1";    
           }
           
-        }
-        echo "<script>console.log('---')</script>";
+        } 
         if($flag=="1")
         {
            session_start();
