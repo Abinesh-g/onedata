@@ -26,16 +26,17 @@ if(isset($_POST['softcopy']))
 ?>
 <html lang="en">
   <head>
-    
-    <!-- Required meta tags -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+    <link href="signin.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -44,9 +45,8 @@ footer {
 }
  
  body {
-  background: url('Element-BG-06.jpg');
+  background: url('EIS_Employee-ID-BG.jpg');
   background-repeat:no-repeat;
-
   background-size:cover;
  } 
  .center {
@@ -79,31 +79,22 @@ text-align: center;
         
     
 </nav> 
-<form method="post" style="padding-top:93px">
-<br><br><br><br><br>
-<!-- <div class="wrapper"> 
-            <nav id="side bar" class="text-light" >
-                <ul class="list-unstyled components">
-                    <li class="text-white"><br><br><br> -->
+<div class="container">
+<form method="post" class="pt-5">
+<br><br><br><br><br> 
                     <div class="row">
-                    <div class="col-md-5"></div>
+                    <div class="col-4"></div>
                     
-                    <div class="col-md-2.5">
-                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT DETAILS"  name="insert">
-                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT DEGREE DETAILS"name="degree">
-                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT EXPERIENCE DETAILS" name="experience">                        
-                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT TECHNOLOGY & TOOLS " name="technology">
-                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT REFERENCE DETAILS" name="reference">
-                         <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-left" value="INSERT SOFTCOPY DETAILS"  name="softcopy">
+                    <div class="col-4">
+                        <input type="submit"  class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT DETAILS"  name="insert">
+                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT DEGREE DETAILS"name="degree">
+                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT EXPERIENCE DETAILS" name="experience">                        
+                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT TECHNOLOGY & TOOLS " name="technology">
+                        <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT REFERENCE DETAILS" name="reference">
+                         <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT SOFTCOPY DETAILS"  name="softcopy">
                     </div></div><br><br><br><br><br>
-
-                    <!-- </li>
-                </ul>
-                </div>
-            </nav>
-
-</div> -->
-</form>
+ 
+</form></div>
 </nav>
 </body>
 <footer style="top:180px;">

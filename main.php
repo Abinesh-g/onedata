@@ -47,7 +47,7 @@ footer {
  body {
   background: url('EIS_Admin-Bg-06.jpg');
   background-repeat:no-repeat;
-
+  overflow:auto;  
   background-size:cover;
  } 
  .center {
@@ -65,14 +65,14 @@ footer {
 
  <nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
 
-       <div class="container-fluid">
-       <div class="col-md-5"></div>
-        <div class="col-md-3">
+       <div class="container">
+       <div class="col-3"></div>
+        <div class="col-6">
         <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
-        <div class="col-md-3"></div>
+                 
      <ul class="nav navbar-nav navbar-right">
-       <a href="index.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
-    </ul> 
+       <a href="index.php" class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+    </ul>  
   </nav>
 
 
@@ -87,14 +87,14 @@ footer {
         <input class="btn btn-secondary btn-block" type="submit" value="UPDATE DETAILS"style="height:35px;" name="update" ><br>
         <input class="btn btn-secondary btn-block" type="submit" value="DELETE DETAILS"style="height:35px;" name="delete" ><br>
         <input class="btn btn-secondary btn-block" type="submit" value="EXPORT DATA TO EXCEL"style="height:35px;" name="export" ><br><br><br><br><br> 
-</div>     
+     
 </form>
 </nav>
 
 <footer style="padding-bottom: 0%;">
 <p class="mt-2 mb-3 text-center" >&copy; Onedata Software Solution Pvt Ltd. All Rights Reserved</p>
 </footer>
-
+</div>
 </div>   
 </body>
 </html>

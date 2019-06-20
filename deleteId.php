@@ -48,15 +48,17 @@ if(isset($_POST['Submit']))
 <html>
 <head>
     
-    <!-- Required meta tags -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+    <link href="signin.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -92,44 +94,28 @@ text-align: center;
 </nav> 
 <body class="" background="EIS_Employee-ID-BG.jpg">
 
-
-<form method="post" action="">
 <div class="container">
+<form method="post" action="">
 <div class="row" style="margin-top: 200px">
-        <div class="col-md-5"></div>
-        <div class="col-md-2">
-        <h3 style="padding-left:25px;  width:210px;" >EMPLOYEE ID</h3>
-        </div>
-    </div></div>
-    <br><br>
-    <div class="container">
-    <div class="row">
-         <div class="col-md-5"></div>
-        <div class="col-md-2">
+     
+        <div class="offset-4 col-2">
+        <h3    width:210px;" >EMPLOYEE ID</h3>
+        
+    <br><br>  
         <input type="text" name="employeeId" class="form-control " style="width:210px;" placeholder="Enter Employee ID" required>
-
-        </div>
-    </div>
-
-       <br>
-        <div class="row">
-         <div class="col-md-5"></div>
-         <div class="col-md-2">
-         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; type="submit"  value="Submit"name="Submit" onclick="return confirm('Are you sure you want to delete this item?');" ><br><br></center>
-    
-            </div>
-        </div>
+    <br>
+         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; type="submit"  value="Submit"name="Submit" onclick="return confirm('Are you sure you want to delete this item?');" ><br> 
     </div>
 </div>
 
-</div>
-</form>
-</div>
-</body>
     <footer style="top:180px; margin-top: 135px">
       <p class="mt-2 mb-3 text-center" >&copy; Onedata Software Solution Pvt Ltd</p>
     </footer>
 
 
+</div>
+</form>
+</div>
+</body>
 
 </html>

@@ -106,8 +106,11 @@ if(isset($_POST['update']))
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -117,6 +120,18 @@ if(isset($_POST['update']))
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <title>ONEDATA</title>
+
+<style>
+
+body {
+  background: url('bg1.jpg');
+  
+
+  background-size:cover;
+ } 
+ 
+</style>
+
 </head>
 
 <body class=""  >
@@ -138,9 +153,9 @@ if(isset($_POST['update']))
 </nav> 
   <form method="post" class="form-signin text-center justify-content-center" style="padding-top:10%;min-width:550px;" enctype="multipart/form-data">
   
-    <div class="row justify-content-center">
-            
-
+    <div class="row ">
+       <div class="col-3"></div>   
+         <div class="col-6">
             <?php
                 include 'connection.php';
                 $qry="SELECT * FROM details";
@@ -542,8 +557,7 @@ if(isset($_POST['update']))
                     </div>
                 </div><br>
 
-
-
+</div></div></div> 
 
                 <br><br><br>
                 <input class="btn btn-lg btn-primary btn-block" style="background-image: linear-gradient(to left, #141f72,#2cb9f9)"; type="submit"  value="Update" name="update" > 

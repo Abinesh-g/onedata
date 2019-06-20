@@ -6,18 +6,22 @@ $result = mysqli_query($connection, $sql);
 ?>
 <html>  
  <head> 
-      <meta charset="utf-8">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="signin.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
-<title>ONEDATA </title>  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+<title>ONEDATA </title>   
  </head>  
  <body > 
 <div class="container">
@@ -54,7 +58,7 @@ $result = mysqli_query($connection, $sql);
 						<th>ANNUAL INCOME</th><th>ADDRESS</th>
 						<th>CONTECT NUMBER</th><th>NAME OF SCHOOL</th>
 						<th>10TH MARK</th><th>10TH PERCENTAGE</th><th>10TH BOARD</th><th>NAME OF SCHOOL</th><th>12TH MARK</th><th>12TH PERCENTAGE</th>
-						<th>12TH BOARD</th><th>LINKEDIN ID</th><th>SKYPE ID</th><th>EMERGENCY-CONTACT PERSON NAME</th><th>EMERGENCY-CONTACT PERSON NUMBER</th><th>EMERGENCY-CONTACT RELATION TYPE</th>
+						<th>12TH BOARD</th><th>LINKEDIN ID</th><th>SKYPE ID</th><th>EMERGENCY CONTACT PERSON NAME</th><th>EMERGENCY CONTACT PERSON NUMBER</th><th>EMERGENCY CONTACT RELATION TYPE</th>
                     </tr>
      <?php
      while($row = mysqli_fetch_array($result))  

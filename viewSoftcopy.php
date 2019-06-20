@@ -5,8 +5,11 @@ $employeeId=$_SESSION["employeeId"] ;
 ?>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -34,8 +37,7 @@ $employeeId=$_SESSION["employeeId"] ;
         <div class="col-md-4"></div>
         
     
-</nav> 
-
+</nav>
   <form method="post" class="form-signin text-center justify-content-center" style="padding-top:0%;min-width:500px;" enctype="multipart/form-data">
   
 

@@ -30,15 +30,17 @@ if(isset($_POST['submit']))
 <html lang="en">
   <head>
     
-    <!-- Required meta tags -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+    <link href="signin.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -93,7 +95,9 @@ text-align: center;
 }
 </style>
 <title>ONEDATA  </title>
-</head><nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+</head>
+
+<nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
 
          
     
@@ -108,10 +112,14 @@ text-align: center;
     
 </nav> 
 <body class="" background="bg1.png">
+  <div class="container">
 <form action="" class="text-center" method="post" style="padding-top:0%" enctype="multipart/form-data">
 <br><br><br><br><br><br><br><br> 
- <center>       
- <h3 >SELECT TYPE:</h3>
+ 
+ <div class="row"> 
+ <div class="offset-4 col-3">  
+  <center>    
+ <h3 >SELECT TYPE:</h3><br>
  <select  name="description" required>
 					<option value="AADHAR-CARD">AADHAR CARD</option>
 					<option value="PASSBOOK">PASSBOOK</option>
@@ -142,35 +150,21 @@ text-align: center;
           <option value="CERTIFICATION-V">CERTIFICATION-V</option>
 					<option value="CONSOLIDATED">CONSOLIDATED CERTIFICATE</option>
 					</select>
-</center>  				 	
+ </center>
+	 <br><br>
+				<h3  ">UPLOAD PHOTO:</h3>
+				 
+	 <br><center>
+				<input type="file" name="image" class=" btn btn-outline-secondary" placeholder="Enter Details" required><br></center>
+  
+				<input type="submit" class="btn btn-lg   btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9);  "; name="submit"  value="submit">
+	</div></div>	 
 
-
-<br><br><br>
-		<div class="row">
-		    <div class="col-md-4"></div>
-				<div class="col-md-4">
-				<h3 style="padding-top:0px">UPLOAD PHOTO:</h3>
-				</div>
-		</div>
-		<div class="row">
-		     <div class="col-md-4"></div>
-				<div class="col-md-4">
-				<input type="file" name="image" class="form-control btn-outline-secondary" placeholder="Enter Details" required>
-
-				</div>
-		</div>
-<br><br>
-		<div class="row">
-		     <div class="col-md-4"></div>
-				<div class="col-md-4">
-				<input type="submit" class="btn btn-lg btn btn-outline-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9);  "; name="submit"  value="submit">
-				</div>
-		</div>
-</form>
-</body>
 
 		<footer style="top:180px;">
 			<p class="mt-2 mb-3 text-center" >&copy; Onedata Software solution</p>
 		</footer>
-
+</form>
+</div>
+</body>
 </html>
