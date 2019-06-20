@@ -5,6 +5,7 @@ if(isset($_POST['Submit']))
 
 
         $employeeId=$_POST['employeeId'];
+        echo "<script>console.log('Employee ID - ' + " . $employeeId . ")</script>";
         $flag="0";
         include 'connection.php';
         $qry="SELECT * FROM employeeId";
