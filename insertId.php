@@ -8,7 +8,7 @@ if(isset($_POST['Submit']))
         echo "<script>console.log('Employee ID - " . $employeeId . "')</script>";
         $flag="0";
         include 'connection.php';
-        $qry="SELECT * FROM employeeId";
+        $qry="SELECT * FROM employeeid";
         $result=mysqli_query($connection,$qry);
         //$count=0;
 
