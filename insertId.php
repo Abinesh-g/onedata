@@ -78,21 +78,21 @@ text-align: center;
 <body class="" background="EIS_Employee-ID-BG.jpg">
 <div class="container">
 <form method="post" action="">
+  <center>
 <div class="row" style="margin-top: 150px">
 
-       
-        <div class="offset-5 col-6">
-        <h3 style="padding-left:25px;  width:210px;" >EMPLOYEE ID</h3><br><br>
+      
+        <div class="col-sm-offset-4 col-xs-4">
+        <h3 style="width: 150px"  >EMPLOYEE ID</h3><br><br>
         
          
-        <input type="text" name="employeeId" class="form-control " style="width:210px;" placeholder="Enter Employee ID" required> 
+        <input type="text" name="employeeId" class="form-control " style="width: 150px"  placeholder="Enter Employee ID" required> 
          
        <br> 
-         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; type="submit"  value="Submit"name="Submit" ><br><br></center>
+         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); width: 150px; "; type="submit"  value="Submit"name="Submit" ><br><br> 
 	   </div>
-   </div>
- </div>
- 
+</div>
+ </center>
 </form>
 </div>
 </body>

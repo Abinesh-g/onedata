@@ -59,10 +59,9 @@
          
     
        <ul class="nav navbar-nav navbar-right">
-       <a href="insertDetailsMenu.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
+       <a href="insertDetailsMenu.php"    class="text-white bg-dark col-sm-offset-1"><span class="glyphicon glyphicon-log-out"></span> back</a>
     </ul> 
-       <div class="col-md-5"></div>
-        <div class="col-md-3">
+        <div class="col-sm-offset-4">
         <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
         <div class="col-md-4"></div>
         

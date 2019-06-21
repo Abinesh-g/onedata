@@ -56,7 +56,7 @@ echo "<script>alert('Invalid Username or Password')</script>";
   <div class="container">
     <form action=""  method="post" >
        <div class="row"> 
-        <div class="offset-1 col-4"> 
+        <div class="offset-1 col-sm-offset-4 col-xs-offset-4"> 
           <center> 
            <img src="OD LOGO-1.png" alt="Logo" style="width:180px;"><br><br>   
           <h1 class=" font-weight-normal"  >LOGIN</h1><br>

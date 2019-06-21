@@ -79,10 +79,9 @@ text-align: center;
          
     
        <ul class="nav navbar-nav navbar-right">
-       <a href="main.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
-    </ul> 
-       <div class="col-md-5"></div>
-        <div class="col-md-3">
+       <a href="main.php"    class="text-white bg-darkcol-sm-offset-1"><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul>  
+        <div class="col-sm-offset-4">
         <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
         <div class="col-md-4"></div>
         
@@ -94,13 +93,13 @@ text-align: center;
 <form method="post" action="">
 <div class="row" style="margin-top: 200px">
      
-        <div class="offset-4 col-2">
-        <h3    width:210px;" >EMPLOYEE ID</h3>
+        <div class="col-sm-offset-5 col-xs-offset-4">
+        <h3   style="width:150px;" >EMPLOYEE ID</h3>
         
     <br><br>  
-        <input type="text" name="employeeId" class="form-control " style="width:210px;" placeholder="Enter Employee ID" required>
+        <input type="text" name="employeeId" class="form-control " style="width:150px;" placeholder="Enter Employee ID" required>
     <br>
-         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; type="submit"  value="Submit"name="Submit" ><br><br></center>
+         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:150px;"; type="submit"  value="Submit"name="Submit" ><br><br></center>
     
             
     </div>
