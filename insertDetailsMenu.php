@@ -94,10 +94,12 @@ text-align: center;
                          <input type="submit" class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT SOFTCOPY DETAILS"  name="softcopy">
                     </div></div><br><br><br><br><br>
  
-</form></div>
+
 </nav>
-</body>
+
 <footer style="top:180px;">
 <p class="mt-2 mb-3 text-center" >&copy; ONEDATA SOFTWARE SOLUTION PRIVATE LIMITED</p>
 </footer>
+</form></div>
+</body>
 </html>

@@ -61,7 +61,7 @@ footer {
 
 <body>
 
-<div class="container">
+
 
  <nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
 
@@ -77,6 +77,7 @@ footer {
 
 
 <nav>
+<div class="container">
 <form method="post" style="padding-top:100px" action="">
   <div class="center">
      
@@ -88,13 +89,16 @@ footer {
         <input class="btn btn-secondary btn-block" type="submit" value="DELETE DETAILS"style="height:35px;" name="delete" ><br>
         <input class="btn btn-secondary btn-block" type="submit" value="EXPORT DATA TO EXCEL"style="height:35px;" name="export" ><br><br><br><br><br> 
      
-</form>
-</nav>
 
-<footer style="padding-bottom: 0%;">
-<p class="mt-2 mb-3 text-center" >&copy; Onedata Software Solution Pvt Ltd. All Rights Reserved</p>
-</footer>
+
+
+    <footer style="padding-bottom: 0%;">
+    <p class="mt-2 mb-3 text-center" >&copy; Onedata Software Solution Pvt Ltd. All Rights Reserved</p>
+    </footer>
 </div>
+
+</form>
 </div>   
+</nav>
 </body>
 </html>

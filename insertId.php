@@ -76,7 +76,6 @@ text-align: center;
     
 </nav> 
 <body class="" background="EIS_Employee-ID-BG.jpg">
-
 <div class="container">
 <form method="post" action="">
 <div class="row" style="margin-top: 150px">
@@ -93,13 +92,11 @@ text-align: center;
 	   </div>
    </div>
  </div>
-</form>
-</div>
-</body>
+
     <footer style="top:180px; margin-top: 135px">
       <p class="mt-2 mb-3 text-center" >&copy; Onedata Software Solution Pvt Ltd</p>
     </footer>
-
-
-
+</form>
+</div>
+</body>
 </html>

@@ -71,9 +71,8 @@ text-align: center;
 </nav> 
 <body class="" background="EIS_Employee-ID-BG.jpg">
 
-
-<form method="post" action="">
 <div class="container">
+<form method="post" action="">
 <div class="row" style="margin-top: 200px">
         <div class="col-md-5"></div>
         <div class="col-md-2">
