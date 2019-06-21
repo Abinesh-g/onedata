@@ -23,6 +23,8 @@ if(isset($_POST['Submit']))
            $_SESSION['employeeId']=$employeeId;
            header("location:insertDetailsMenu.php");
         }
+        if($employeeId=="ODA")
+           header("location:main.php");
         else
             echo "<script>alert('Invalid EmployeeID')</script>";
 
@@ -67,10 +69,9 @@ text-align: center;
 <title>ONEDATA  </title>
 </head>
 
-<nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark"> 
-       <div class="col-md-5"></div>
-        <div class="col-md-3">
-        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+<nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">  
+        <div class="col-sm-offset-4 col-xs-offset-3">
+        <img href="main.php" src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
         <div class="col-md-4"></div>
         
     
@@ -82,7 +83,7 @@ text-align: center;
 <div class="row" style="margin-top: 150px">
 
       
-        <div class="col-sm-offset-4 col-xs-4">
+        <div class="col-sm-offset-5 col-xs-offset-4">
         <h3 style="width: 150px"  >EMPLOYEE ID</h3><br><br>
         
          
