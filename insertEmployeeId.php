@@ -73,38 +73,18 @@ text-align: center;
 
 <div class="container">
 <form method="post" action="">
-<div class="row" style="margin-top: 200px">
-        <div class="col-md-5"></div>
-        <div class="col-md-2">
-        <h3 style="padding-left:25px;  width:210px;" >EMPLOYEE ID</h3>
-        </div>
-    </div></div>
-    <br><br>
-    <div class="container">
-    <div class="row">
-         <div class="col-md-5"></div>
-        <div class="col-md-2">
-        <input type="text" name="employeeId" class="form-control " style="width:210px;" placeholder="Enter Employee ID" required>
+<div class="row" style="margin-top: 150px">
+      <div class="col-md-5"></div>
+        <div class="col-md-3">   
+        <h3 style="padding-left:25px;  width:210px;" >EMPLOYEE ID</h3><br><br>
+        
+        <input type="text" name="employeeId" class="form-control " style="width:210px;" placeholder="Enter Employee ID" required><br>
 
-        </div>
-    </div>
-
-       <br>
-        <div class="row">
-         <div class="col-md-5"></div>
-         <div class="col-md-2">
-         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; type="submit"  value="Submit"name="Submit" ><br><br></center>
-    
-            </div>
-        </div>
-    </div>
+         
+         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; type="submit"  value="Submit"name="Submit" ><br><br></center> 
+        </div> 
 </div>
-
 </div>
-    <footer style="top:180px; margin-top: 135px">
-      <p class="mt-2 mb-3 text-center" >&copy; Onedata Software Solution Pvt Ltd</p>
-    </footer>
-
 </form>
 </div>
 </body>

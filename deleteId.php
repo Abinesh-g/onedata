@@ -107,10 +107,7 @@ text-align: center;
          <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; type="submit"  value="Submit"name="Submit" onclick="return confirm('Are you sure you want to delete this item?');" ><br> 
     </div>
 </div>
-
-    <footer style="top:180px; margin-top: 135px">
-      <p class="mt-2 mb-3 text-center" >&copy; Onedata Software Solution Pvt Ltd</p>
-    </footer>
+ 
 
 
 </div>

@@ -107,10 +107,7 @@ text-align: center;
 </div>
 
 
-
-    <footer style="top:180px; margin-top: 135px">
-      <p class="mt-2 mb-3 text-center" >&copy; Onedata Software Solution Pvt Ltd</p>
-    </footer>
+ 
 
 </form>
 </div>
