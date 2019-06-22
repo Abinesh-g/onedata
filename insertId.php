@@ -65,14 +65,15 @@ body {
 text-align: center;
 
 }
-</style>
+</style><link rel="icon" href="od icon.jpg" type="image/icon type">
 <title>ONEDATA  </title>
 </head>
 
 <nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">  
-        <div class="col-sm-offset-4 col-xs-offset-3">
-        <img href="main.php" src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
-        <div class="col-md-4"></div>
+        <div class="col-sm-12">
+          <center>
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;"> </center> </div>
+           
         
     
 </nav> 
@@ -83,14 +84,14 @@ text-align: center;
 <div class="row" style="margin-top: 150px">
 
       
-        <div class="col-sm-offset-5 col-xs-offset-4">
-        <h3 style="width: 150px"  >EMPLOYEE ID</h3><br><br>
+        <div class="col-sm-offset-5 col-xs-offset-5">
+        <h3 style="width: 250px"  >EMPLOYEE ID</h3><br><br>
         
          
-        <input type="text" name="employeeId" class="form-control " style="width: 150px"  placeholder="Enter Employee ID" required> 
+        <input type="text" name="employeeId" class="form-control " style="width: 250px"  placeholder="Enter Employee ID" required> 
          
        <br> 
-         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); width: 150px; "; type="submit"  value="Submit"name="Submit" ><br><br> 
+         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); width: 250px; "; type="submit"  value="Submit"name="Submit" ><br><br> 
 	   </div>
 </div>
  </center>

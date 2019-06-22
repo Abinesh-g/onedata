@@ -44,7 +44,7 @@ include 'connection.php';
 
 
   <html lang="en"> 
-      <head>  
+      <head>  <link rel="icon" href="od icon.jpg" type="image/icon type">
            <title>ONEDATA</title>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -62,25 +62,20 @@ include 'connection.php';
 
 
 	</head>
-	<body class="" background="bg1.png">
- <nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
+	<body class="" background="bg1.png"><nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
 
          
     
        <ul class="nav navbar-nav navbar-right">
-       <a href="insertDetailsMenu.php"    class="text-white bg-dark col-sm-offset-1"><span class="glyphicon glyphicon-log-out"></span> back</a>
-    </ul> <div class="col-sm-offset-4">
-        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
-        <div class="col-md-4"></div>
-        
-    
+       <a href="insertDetailsMenu.php" class="text-white bg-dark col-sm-offset-1 "><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul>
+        <div class="col-sm-12">
+          <center>
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;"> </center>
+         </div>    
 </nav> 
-		<div class="container">
-			<br />
-			<br /><br />
-      <br /><br />
-      <br />
-			<h2 align="center">DEGREE INFORMATION</a></h2>
+		<div class="container"> 
+      <br /><br /><h2 align="center">DEGREE INFORMATION</a></h2>
 			<div class="form-group">
 				
 				<form name="add_name" id="add_name" action="" class="text-center" method="post" style="padding-top:0%" enctype="multipart/form-data">

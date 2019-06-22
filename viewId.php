@@ -62,6 +62,7 @@ text-align: center;
 
 }
 </style>
+<link rel="icon" href="od icon.jpg" type="image/icon type">
 <title>ONEDATA  </title>
 </head>
 
@@ -70,13 +71,12 @@ text-align: center;
          
     
        <ul class="nav navbar-nav navbar-right">
-       <a href="main.php"    class="text-white bg-dark col-sm-offset-1"><span class="glyphicon glyphicon-log-out"></span> back</a>
-    </ul>  
-        <div class="col-sm-offset-4">
-        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
-        <div class="col-md-4"></div>
-        
-    
+       <a href="main.php" class="text-white bg-dark col-sm-offset-1 "><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul>
+        <div class="col-sm-12">
+          <center>
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;"> </center>
+         </div>    
 </nav> 
 <body class="" background="EIS_Employee-ID-BG.jpg">
 
@@ -85,12 +85,12 @@ text-align: center;
 <div class="row" style="margin-top: 200px">
      
         <div class="col-sm-offset-5 col-xs-4">
-        <h3 style="width:210px;" >EMPLOYEE ID</h3>
+        <h3 style="width:250px;" >EMPLOYEE ID</h3>
         
     <br><br>  
-        <input type="text" name="employeeId" class="form-control " style="width:210px;" placeholder="Enter Employee ID" required>
+        <input type="text" name="employeeId" class="form-control " style="width:250px;" placeholder="Enter Employee ID" required>
     <br>
-         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; type="submit"  value="Submit"name="Submit" ><br><br></center>
+         <input class="btn btn-default btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:250px;"; type="submit"  value="Submit"name="Submit" ><br><br></center>
        </div>
     
 </div>

@@ -42,22 +42,20 @@ if(isset($_POST['submit']))
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="signin.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- 
+ <link rel="icon" href="od icon.jpg" type="image/icon type">
 <title>ONEDATA  </title>
 </head>
-
 <nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
 
          
     
        <ul class="nav navbar-nav navbar-right">
-       <a href="insertDetailsMenu.php"    class="text-white bg-dark col-sm-1"><span class="glyphicon glyphicon-log-out"></span> back</a>
-    </ul> 
-        <div class="col-sm-offset-3">
-        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
-        <div class="col-md-4"></div>
-        
-    
+       <a href="insertDetailsMenu.php" class="text-white bg-dark col-sm-offset-1 "><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul>
+        <div class="col-sm-12">
+          <center>
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;"> </center>
+         </div>    
 </nav> 
 <body class="" background="bg1.png">
   <div class="container">
@@ -67,8 +65,8 @@ if(isset($_POST['submit']))
  <div class="row"> 
  <div class="col-sm-offset-5 col-xs-offset-3">  
   <center>    
- <h3 style="width: 130px">SELECT TYPE:</h3><br>
- <select  name="description" required>
+ <h3 style="width: 200px">SELECT TYPE:</h3><br>
+ <select  name="description" style="width: 250px" required>
 					<option value="AADHAR-CARD">AADHAR CARD</option>
 					<option value="PASSBOOK">PASSBOOK</option>
 					<option value="PASSPORT">PASSPORT</option>
@@ -100,12 +98,12 @@ if(isset($_POST['submit']))
 					</select>
  </center>
 	 <br><br>
-				<h3 style="width: 150px" >UPLOAD PHOTO:</h3>
+				<h3 style="width: 250px" >UPLOAD PHOTO:</h3>
 				 
 	 <br><center>
-				<input type="file" name="image" class=" btn btn-outline-secondary" style="width: 130px"placeholder="Enter Details" required><br></center>
-  
-				<input type="submit" class="btn btn-lg   btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); width: 150px"; name="submit"  value="submit">
+				<input type="file" name="image" class=" btn btn-outline-secondary" style="width: 200px"placeholder="Enter Details" required><br></center>
+  <br><br>
+				<input type="submit" class="btn btn-lg   btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); width: 250px"; name="submit"  value="submit">
 	</div></div>	 <br><br><br><br>
 
 

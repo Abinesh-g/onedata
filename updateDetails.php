@@ -118,7 +118,7 @@ if(isset($_POST['update']))
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="signin.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="icon" href="od icon.jpg" type="image/icon type">
 <title>ONEDATA</title>
 
 <style>
@@ -151,7 +151,7 @@ body {
         
     
 </nav> 
-  <form method="post" class="form-signin text-center justify-content-center" style="padding-top:10%;min-width:550px;" enctype="multipart/form-data">
+  <form method="post" class="form-signin text-center justify-content-center" style="padding-top:3%;min-width:550px;" enctype="multipart/form-data">
   
     <div class="row ">
        <div class="col-3"></div>   

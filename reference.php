@@ -37,7 +37,7 @@
 
 
   <html lang="en"> 
-      <head>  
+      <head>  <link rel="icon" href="od icon.jpg" type="image/icon type">
            <title>ONEDATA</title>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -60,16 +60,15 @@
          
     
        <ul class="nav navbar-nav navbar-right">
-       <a href="insertDetailsMenu.php"    class="text-white bg-dark col-sm-offset-1"><span class="glyphicon glyphicon-log-out"></span> back</a>
-    </ul>  
-        <div class="col-sm-offset-4">
-        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
-        <div class="col-md-4"></div>
-        
-    
+       <a href="insertDetailsMenu.php" class="text-white bg-dark col-sm-offset-1 "><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul>
+        <div class="col-sm-12">
+          <center>
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;"> </center>
+         </div>    
 </nav> 
 		<div class="container">
-			<br /><br /><br /><br /><br /><br />
+			<br /><br /> 
 			<h2 align="center">REFERENCE INFORMATION</a></h2>
 			<div class="form-group">
 				
@@ -85,7 +84,7 @@
                                     <tr><td><button type="button" name="add" id="add" class="btn btn-outline-SECONDARY">ADD REFERENCE</button></td>  
                                     </tr>  
                                </table>  
-                               <input type="submit" name="submit" id="submit" class="btn btn-outline-primary" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; value="Submit" />  
+                               <input type="submit" name="submit" id="submit" class="btn " style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; value="Submit" />  
                           </div>  
                      </form>  
                 </div>  

@@ -46,7 +46,7 @@ footer {
   width:250px;
   padding: 10px;
 }
-</style>
+</style><link rel="icon" href="od icon.jpg" type="image/icon type">
 <title>ONEDATA </title>
 </head>
 

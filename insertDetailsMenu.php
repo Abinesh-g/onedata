@@ -58,7 +58,7 @@ footer {
 text-align: center;
 
 }
-</style>
+</style><link rel="icon" href="od icon.jpg" type="image/icon type">
 <title>ONEDATA  </title>
 </head>
 
@@ -72,9 +72,11 @@ text-align: center;
        <ul class="nav navbar-nav navbar-right">
        <a href="insertId.php" class="text-white bg-dark col-sm-offset-1 "><span class="glyphicon glyphicon-log-out"></span> back</a>
     </ul>
-        <div class="col-sm-offset-4">
-        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
-        <div class="col-md-4"></div>
+        <div class="col-sm-12">
+          <center>
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;"> </center>
+         </div>
+         
         
     
 </nav> 
@@ -83,13 +85,13 @@ text-align: center;
 <br><br><br><br><br> 
                     <div class="row">
                        <div class="col-sm-offset-5 col-xs-offset-3">
-                        <input type="submit" style="width: 150px"  class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT DETAILS"  name="insert">
-                        <input type="submit" style="width: 150px"class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT DEGREE DETAILS"name="degree">
-                        <input type="submit" style="width: 150px"class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT EXPERIENCE DETAILS" name="experience">                        
-                        <input type="submit" style="width: 150px"class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT TECHNOLOGY & TOOLS " name="technology">
-                        <input type="submit" style="width: 150px"class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT REFERENCE DETAILS" name="reference">
-                         <input type="submit" style="width: 150px"class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT SOFTCOPY DETAILS"  name="softcopy">
-                    </div></div><br><br><br><br><br>
+                        <input type="submit" style="width: 200px"  class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT DETAILS"  name="insert">
+                        <input type="submit" style="width: 200px"class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT DEGREE DETAILS"name="degree">
+                        <input type="submit" style="width: 200px"class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT EXPERIENCE DETAILS" name="experience">                        
+                        <input type="submit" style="width: 200px"class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT TECHNOLOGY & TOOLS " name="technology">
+                        <input type="submit" style="width: 200px"class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT REFERENCE DETAILS" name="reference">
+                         <input type="submit" style="width: 200px;"class="btn btn-md btn-outline-secondary btn-block text-center" value="INSERT SOFTCOPY DETAILS"  name="softcopy">
+                    </div></div><br><br><br><br><br><br><br><br><br>
  
 
 </nav>

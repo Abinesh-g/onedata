@@ -20,7 +20,7 @@ $result = mysqli_query($connection, $sql);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-
+<link rel="icon" href="od icon.jpg" type="image/icon type">
 <title>ONEDATA </title>   
  </head>  
  <body > 
@@ -31,14 +31,12 @@ $result = mysqli_query($connection, $sql);
          
     
        <ul class="nav navbar-nav navbar-right">
-       <a href="main.php"    class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span> back</a>
-    </ul> 
-       <div class="col-md-5"></div>
-        <div class="col-md-3">
-        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
-        <div class="col-md-4"></div>
-        
-    
+       <a href="main.php" class="text-white bg-dark col-sm-offset-1 "><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul>
+        <div class="col-sm-12">
+          <center>
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;"> </center>
+         </div>    
 </nav> 
 
     <form method="post" action="export.php">  

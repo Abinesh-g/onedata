@@ -17,7 +17,7 @@ $employeeId=$_SESSION["employeeId"] ;
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="signin.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="icon" href="od icon.jpg" type="image/icon type">
 <title>ONEDATA</title>
 </head>
 

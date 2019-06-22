@@ -32,6 +32,8 @@ echo "<script>alert('Invalid Username or Password')</script>";
     <link href="signin.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<link rel="icon" href="od icon.jpg" type="image/icon type">
+
 <title>ONEDATA</title>
 <style>
 
@@ -54,14 +56,14 @@ echo "<script>alert('Invalid Username or Password')</script>";
  <br> 
   
   <div class="container">
-    <form action=""  method="post" >
+    <form action=""  method="post"  >
        <div class="row"> 
-        <div class="offset-1 col-sm-offset-4 col-xs-offset-4"> 
+        <div class="offset-1 col-sm-offset-6 col-xs-offset-6 pt-5"> 
           <center> 
            <img src="OD LOGO-1.png" alt="Logo" style="width:180px;"><br><br>   
           <h1 class=" font-weight-normal"  >LOGIN</h1><br>
           <label for="uname"  class="sr-only">Username</label>
-          <input type="text" id="uname" class="form-control" style="height:35px;" placeholder="Username" name="name" required autofocus><br>
+          <input type="text" id="uname" class="form-control" style="height:35px; width: 250px" placeholder="Username" name="name" required autofocus><br>
           <label for="inputPassword" class="sr-only">Password</label>
           <input type="password" id="inputPassword" class="form-control" style="height:35px;" name="psw" placeholder="Password" required><br><br>
     	     <input class="btn btn-lg btn-primary btn-block" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9)"; type="submit"  value="Sign In" ><br><br>

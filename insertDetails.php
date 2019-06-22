@@ -102,28 +102,28 @@ if(isset($_POST['Submit']))
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="signin.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	</head><title>ONEDATA</title>
+<link rel="icon" href="od icon.jpg" type="image/icon type">
+	<title>ONEDATA</title>
+</head>
 
 <nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
 
          
     
        <ul class="nav navbar-nav navbar-right">
-       <a href="insertDetailsMenu.php"    class="text-white bg-dark col-sm-offset-1 "><span class="glyphicon glyphicon-log-out"></span> back</a>
-    </ul> <div class="col-sm-offset-4">
-        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
-        <div class="col-md-4"></div>
-        
-    
+       <a href="insertDetailsMenu.php" class="text-white bg-dark col-sm-offset-1 "><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul>
+        <div class="col-sm-12">
+          <center>
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;"> </center>
+         </div>    
 </nav> 
 
 <body class="" background="bg1.png">
 <div class="container">
-<form action="" class="text-center" method="post" style="padding-top:0%" enctype="multipart/form-data">
-					<!-- PERSONAL DETAILS -->
-
-					<br><br><br><br><br><br>
+<form action="" class="text-center" method="post"" enctype="multipart/form-data">
+<h1 class="text-secondary">INSERT DETAILS</h1><br>
+					<br><br><br>
 					<div class="container">
 						<div class="row"><div class="col-sm-3"></div>
 							<div class="col-sm-6">
@@ -328,7 +328,7 @@ if(isset($_POST['Submit']))
 					
 					
 					<div class="row"><div class="col-md-3"></div><div class="col-md-5"><br><br>
-					<center><input type="submit" name="Submit"value="SUBMIT FORM" class = "btn btn-outline-secondary" style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;";  ></div></center></div>
+					<center><input type="submit" name="Submit"value="SUBMIT FORM" class = "btn " style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;";  ></div></center></div>
 				</div>
 				</form></div>
 		</body>

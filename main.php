@@ -56,6 +56,7 @@ footer {
   padding: 10px;
 }
 </style>
+<link rel="icon" href="od icon.jpg" type="image/icon type">
 <title>ONEDATA </title>
 </head>
 
@@ -65,10 +66,9 @@ footer {
 
  <nav class="navbar justify-content-center fixed-top navbar-expand-sm bg-dark navbar-dark">
 
-       <div class="container">
-       <div class="col-3"></div>
-        <div class="col-6">
-        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
+       <div class="container"> 
+        <div class="col-sm-12"><center>
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;"> </center> </div>
                  
      <ul class="nav navbar-nav navbar-right">
        <a href="index.php" class="text-white bg-dark"><span class="glyphicon glyphicon-log-out"></span>Logout</a>

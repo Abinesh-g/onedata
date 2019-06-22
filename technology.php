@@ -36,7 +36,7 @@
 
 
   <html lang="en"> 
-      <head>  
+      <head>  <link rel="icon" href="od icon.jpg" type="image/icon type">
            <title>ONEDATA</title>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -59,16 +59,15 @@
          
     
        <ul class="nav navbar-nav navbar-right">
-       <a href="insertDetailsMenu.php"    class="text-white bg-dark col-sm-offset-1"><span class="glyphicon glyphicon-log-out"></span> back</a>
-    </ul> 
-        <div class="col-sm-offset-4">
-        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;">  </div>
-        <div class="col-md-4"></div>
-        
-    
-</nav> 
+       <a href="insertDetailsMenu.php" class="text-white bg-dark col-sm-offset-1 "><span class="glyphicon glyphicon-log-out"></span> back</a>
+    </ul>
+        <div class="col-sm-12">
+          <center>
+        <img src="OD LOGO_White.png" alt="Logo" style="width:180px;"> </center>
+         </div>    
+</nav>  
 		<div class="container">
-			<br /><br /><br /><br /><br /><br />
+			<br /><br /> 
 			<h2 align="center">TECHNOLOGY & TOOLS INFORMATION</a></h2>
 			<div class="form-group">
 				
@@ -78,11 +77,11 @@
                                <table class="table table-bordered" id="dynamic_field">  
                                     <tr><td><input type="text" name="technology[]" placeholder="Enter the technology you Know" class="form-control name_list" / required></td> <tr><td> Rate Yourself(out of 10):</td></tr>
                                     <tr><td><input type="number" name="rate[]" class="form-control name_list" / required></td>  
-                                    <tr><td><input type="date" name="certification[]" placeholder="Enter the certification & course you have completed" class="form-control name_list" / required></td>  
+                                    <tr><td><input type="text" name="certification[]" placeholder="Enter the certification & course you have completed" class="form-control name_list" / required></td>  
                                     <tr><td><button type="button" name="add" id="add" class="btn btn-outline-SECONDARY">ADD TECHNOLOGY</button></td>  
                                     </tr>  
                                </table>  
-                               <input type="submit" name="submit" id="submit" class="btn btn-outline-primary"style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; value="SUBMIT" />  
+                               <input type="submit" name="submit" id="submit" class="btn "style=" background-image: linear-gradient(to left, #141f72 , #2cb9f9); Width:210px;"; value="SUBMIT" />  
                           </div>  
                      </form>  
                 </div>  
@@ -97,7 +96,7 @@
            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="technology[]" placeholder="Enter the technology you Know" class="form-control name_list" / ></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
            
            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="rate[]" placeholder="Rate yourself out of 10" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>'); 
-           $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="date" name="certification[]" placeholder="Enter the certification you have completed" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+           $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="certification[]" placeholder="Enter the certification you have completed" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
       });  
       $(document).on('click', '.btn_remove', function(){  
            var button_id = $(this).attr("id");   
